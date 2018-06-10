@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Alan's Online Weather</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles/normalize.css" rel="stylesheet" >
+        <link href="styles/main-7.css" rel="stylesheet" >
+        <link href="styles/medium-7.css" rel="stylesheet" >
+        <link href="styles/large-7.css" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans" rel="stylesheet">
+        
+        <script type="text/javascript" src="scripts/responsiveMenu.js" defer></script>
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1>Alan's Online Weather</h1>
+            <h4>Today's Weather for Tomorrow's Plans</h4>
+        </header>
+        <nav class="navigation">
+            <button onclick="myFunction()">&#9776;</button>
+            <ul id="primaryNavigation" class="hide">
+                <li><a href="home.html">Home</a></li>
+                <li class="active"><a href="#">Franklin</a></li>
+                <li><a href="greenville.html">Greenville</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
+                <li><a href="#">Storm Center</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2 class="weathernow">Franklin Weather Now</h2>
+            <ul class="franklin">
+                <li>Summary: <b>Sunny</b></li>
+                <li>High: <b>90&#8457;</b></li>
+                <li>Low: <b>50&#8457;</b></li>
+                <li>Precipitation: <b>0&#37;</b></li>
+                <li>Max Wind: <b>5 mph SW</b></li>
+                <li>Wind Chill: <b><strong id="windchill">&deg;F</strong></b></li>
+            </ul>
+            
+            <figure class="photoFullWidth">
+                <img src="images/franklinWeather400.jpg" alt="franklin landscape" sizes="100vw"
+                     srcset="images/franklinWeather400.jpg 400w, images/franklinWeather800.jpg 800w, images/franklinWeather1200.jpg 1200w">
+            </figure>
+            
+            <h3 class="tenday">10 Day Weather Forecast</h3>
+            <table class="hidesmall">
+                <tr class="tendaybackground">
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                    <th>Day 5</th>
+                    <th>Day 6</th>
+                    <th>Day 7</th>
+                    <th>Day 8</th>
+                    <th>Day 9</th>
+                    <th>Day 10</th>
+                    </tr>
+                    <tr>
+                    <td>89&#8457;</td>
+                    <td>87&#8457;</td>
+                    <td>88&#8457;</td>
+                    <td>85&#8457;</td>
+                    <td>90&#8457;</td>
+                    <td>92&#8457;</td>
+                    <td>89&#8457;</td>
+                    <td>87&#8457;</td>
+                    <td>88&#8457;</td>
+                    <td>89&#8457;</td>
+                </tr>
+            </table>
+        </main>
+        <br>
+        <footer>
+            <p class="author" >&copy; 2018 - Alan Gilliam - <a class="terms" href="https://termsfeed.com/blog/sample-terms-and-conditions-template/">Terms of Use</a>
+                <span id="demo"></span></p>
+        </footer>
+        <script type="text/javascript" src="scripts/windChill.js"></script>
+        <script>var d = new Date();document.getElementById("demo").innerHTML = d;</script>
+    </body>
+</html>
