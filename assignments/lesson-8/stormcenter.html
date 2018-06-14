@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Storm Center</title>
+    
+    <meta name="description" content="Franklin-5 practice content. Weather page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<!-- STYLE SHEETS -->
+<link href="styles/normalize.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="styles/main-5.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="styles/medium-5.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="styles/large-5.css" rel="stylesheet">
+<!-- fonts awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="scripts/responsiveMenu.js" defer></script>
+<script type="text/javascript" src="scripts/dateScript.js" async></script>
+<script type="text/javascript" src="scripts/windChill.js" async></script>
+<script type="text/javascript" src="scripts/rankStorm.js" async></script>
+
+
+</head>
+<body>
+<!--  HEADER HERE -->
+    <header>
+        <h1>Weather Central</h1>
+        
+        <h3>This information probably is correct....</h3>
+
+    </header>
+
+
+<!-- NAVIGATION HERE -->
+    <nav>
+        <button onclick="myFunction()">&#9776;</button>
+        <ul id="primaryNavigation" class="hide">
+            <li><a href="home-page.html" class="current">Home</a></li>
+            <li><a href="franklin-8.html">Franklin</a></li>
+            <li><a href="greenville.html">Greenville</a></li>
+            <li><a href="springfield.html">Springfield</a></li>
+            <li class="active"><a href="storm-center.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+
+    </nav>
+
+
+<!-- CONTENT HERE -->
+    <main>
+        <h1>Storm Center <i class="fa fa-umbrella" style="font-size: 40px;"></i></h1>
+        <div class="left">
+        <form action="thanks.html" name="weather" id="situation">
+            <fieldset>
+            <legend><span>Personal Information</span></legend>
+                <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required></label>
+                <label><span>Email:</span><input name="email" type="email" value="" placeholder="storm@gmail.com" required></label>
+                <label><span>Phone:</span><input name="phone" type="tel" value="" placeholder="2108675309" pattern="[0-9]{10}" required></label>
+                <label><span>Zip Code:</span><input name="zipcode" type="number" placeholder="zipcode" required></label>
+            </fieldset>
+            <fieldset>
+            <legend><span>Storm Information</span></legend>
+                <label><span>Storm Date:</span><input name="date" type="date"></label><br>
+                <span>Storm Type:</span>
+                <input type="text" name="stormType" list="storms">
+                <datalist id="storms">
+                    <option value="Flash Flood">
+                    <option value="Hail">  
+                    <option value="Hurricane">
+                    <option value="Thunderstorm">
+                    <option value="Tornado">
+                </datalist><br><br>
+
+                <label for="ranking">Severity (1 to 10)</label><input type="range" id="ranking" value="5" min="1" max="10" step="1" oninput="adjustRanking(this.value)" onchange="adjustRanking(this.value)"><span id="rankingvalue"> 5</span><br><br>
+                
+                <span>Storm Region:</span>
+                <input type="text" name="stormRegion" list="regions" placeholder="Select Region">
+                <datalist id="regions">
+                    <option value="Franklin">
+                    <option value="Greenville">    
+                    <option value="Springfield">
+                </datalist>
+            </fieldset>               
+            <fieldset>
+                <legend><span>Are you in danger?</span></legend>
+                <label><span>Are you in danger?</span></label>
+                <input type="radio" name="UserInDanger" value="yes"> Yes!<br>
+                <input type="radio" name="UserInDanger" value="kinda"> Kinda<br>
+                <input type="radio" name="UserInDanger" value="nope"> Nope<br>    
+                <br>
+                <textarea rows="5" cols="50" name="comment" form="situation">Any additional information....</textarea>
+            </fieldset>
+            
+            <input type="submit" value="Submit" class="submitBtn">
+        </form>
+        
+        </div>
+    </main>
+
+<!-- FOOTER HERE -->
+    <footer>
+		<p>&copy; Alan Gilliam &bull; Homework Lesson 08 - Franklin Weather page  &bull; <span id="displayDate"></span></p>
+    </footer>
+</body>
+</html>
