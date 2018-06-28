@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gallery Page for CIT 230 - BYUI</title>
+        <link rel="stylesheet" href="/Styles/normalize.css">
+        <link rel="stylesheet" href="/Styles/main.css">
+        <link rel="stylesheet" href="/Styles/medium-5.css">
+        <link rel="stylesheet" href="/Styles/large-5.css">
+
+
+    </head>
+    <body>
+
+        <header>
+            <img id="logo" src="/images/weatherlogo.jpg" alt="Tri-city weather logo" width="50" height="50">
+            <h1>Gallery</h1>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+            <nav>
+
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="franklin-8.html">Franklin</a></li>
+                    <li><a href="greenville.html">Greenville</a></li>
+                    <li><a href="springfield.html">Springfield</a></li>
+                    <li><a href="stormCenter.html">Storm Center</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="gallery">
+        <div class="grid">
+
+            <a href="#"><img src="/images/ice.jpg" alt="Ice on tree"><figcaption> Heavy snow in the southwest</figcaption>
+
+            <a href="#"><img src="/images/floodedroad.jpg" alt="Flooded road"><figcaption>Heavy rains cause road closures</figcaption>
+
+            <a href="#"><img src="/images/rainbow.jpg" alt="Rainbow"><figcaption>Double rainbow, what does it mean? </figcaption>
+
+            <a href="#"><img src="/images/snowonbush.jpg" alt="snow on shrub"><figcaption>Spring time snowfall</figcaption>
+
+            <a href="#"><img src="/images/storm.jpg" alt="mountain storm"><figcaption>Storm in the Rockies</figcaption>
+
+            <a href="#"><img src="/images/stormcloud.jpg" alt="stormclouds at sea"><figcaption>Storm clouds off the Bahamas</figcaption>
+
+
+        </div>
+       </section>
+        <footer>
+            <p>&copy; 2017 Tri-County Weather &bull; James Chell &bull; <span id="displayDate"></span></p>
+
+        </footer>
+        <script src="scripts/currentDate.js"></script>
+        <script type="text/javascript" src="scripts/hamburger.js" defer></script>
+        <script src="scripts/windchill.js"></script>
+
+    </body>
+</html>
