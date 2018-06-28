@@ -1,0 +1,130 @@
+/*========= Page Layout ===========*/
+
+@media only screen and (min-width: 37.5em) {
+
+/*========= Header Layout ===========*/
+ 
+    header {   
+        margin: 0 auto; 
+        max-width: 900px;
+    }
+    
+    h1 { 
+        text-align: center; 
+        font-size: 2em;
+        }
+        
+    
+/*========= Top Navigation Layout ===========*/
+        
+    .hamburger { 
+        display: none; 
+        }
+        
+    #mainNav {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #f28731;
+        border-top: 1px solid #f28731; 
+        
+    }
+    
+    .topnav {  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        font-size: 1em;
+        overflow: hidden; 
+        border-top: none; 
+        }
+            
+    .topnav li { 
+        display: flex;
+        border-bottom: none;
+        }
+        
+    .topnav a { 
+        display: flex; 
+        flex-direction: row;
+        text-decoration: none;
+        }
+        
+    
+/*========= Forecast Layout ===========*/
+    
+    #forecast {
+        display: inline;
+    }
+    
+    #forecast h3 {
+        margin-top: 15px;
+        padding-left: 20px;
+    }
+    
+    #mainforecast img{
+    padding: 30px;
+}
+    
+    #tenday {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #tenday li {
+       text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        background: #24408e;
+    }
+
+/*========= Home Page Layout ===========*/
+    
+    #mainArticle {
+      display: flex;
+      flex-direction: row-reverse;
+      }  
+    
+    #mainArticle img {
+        padding-right: 30px;
+        padding-left: 20px;
+    }    
+
+    #cityStats {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+    }
+    
+    .cityBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .reverse {
+        flex-direction: row-reverse;
+    }
+    
+    
+/*========= Gallery Layout ===========*/
+
+    
+    #galleryImg {
+        max-width: 600px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    figure {
+        margin: 5px;
+        max-width: 250px;
+    }
+    
+}
