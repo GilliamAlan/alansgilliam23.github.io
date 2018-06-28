@@ -1,0 +1,48 @@
+/*========= Page Layout ===========*/
+
+@media screen and (min-width: 64em){
+    
+    main {
+        width: 900px;
+        margin: auto;
+    }
+    
+    .topnav {
+        font-size: 1em;
+    }  
+    
+    #news {
+        display: inline;
+    }
+    
+        
+    #articles {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        clear: both;
+    } 
+    
+    article {
+        width: 225px;
+        padding: 20px;
+    } 
+    
+/*========= Gallery Layout ===========*/
+
+    #galleryImg {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;  
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    #galleryImg figure {
+        padding: 5px;
+    }
+    
+    #galleryImg figure:hover {
+        box-shadow: 5px 5px 10px gray;
+    }
+    
+}

@@ -1,0 +1,100 @@
+/*========= Page Layout ===========*/
+
+@media only screen and (min-width: 37.5em) {
+
+/*========= Header Layout ===========*/
+ 
+    header {   
+        margin: 0 auto; 
+        max-width: 900px;
+    }
+    
+    h1 { 
+        text-align: center; 
+        font-size: 2em;
+        }
+        
+    h3 {
+        color: #12ab4b;
+    }
+    
+/*========= Top Navigation Layout ===========*/
+        
+    .hamburger { 
+        display: none; 
+        }
+        
+    #mainNav {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #f28731;
+        border-top: 1px solid #f28731; 
+        
+    }
+    
+    .topnav {  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        font-size: .75em;
+        overflow: hidden; 
+        border-top: none; 
+        }
+            
+    .topnav li { 
+        display: flex;
+        border-bottom: none;
+        }
+        
+    .topnav a { 
+        display: flex; 
+        flex-direction: row;
+        text-decoration: none;
+        }
+        
+    .topnav a:hover {   
+        color: #24408e;   
+        }
+    
+/*========= Forecast Layout ===========*/
+ 
+    #forecast {
+        display: inline;
+    }
+    
+    #forecast h3 {
+        margin-top: 15px;
+        padding-left: 20px;
+    }
+    
+    #tenday {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+    }
+    
+    #tenday li {
+       text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        background: #24408e;
+    }
+    
+/*========= Gallery Layout ===========*/
+
+    
+    #galleryImg {
+        max-width: 600px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    figure {
+        margin: 5px;
+        max-width: 250px;
+    }
+    
+}

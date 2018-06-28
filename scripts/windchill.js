@@ -1,12 +1,9 @@
-// JavaScript Document
-var high = 90;
-var low = 66;
-var windSpeed = 5;
+//Input weather variables from city page data and calculate windchill
 
+var ht = parseFloat(document.getElementById("hightemp").innerHTML);
+var lt = parseFloat(document.getElementById("lowtemp").innerHTML);
+var s = parseFloat(document.getElementById("windspeed").innerHTML);
+var t = (ht + lt) / 2;
+var f = 35.74 + 0.6215 * t - 35.75 * Math.pow(s, 0.16) + 0.4275 * t * Math.pow(s, 0.16);
 
-var avereageTemp = ((high - low) / 2) + low;
-var windChill = 35.74 + 0.6215 * avereageTemp - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * avereageTemp * Math.pow(windSpeed, 0.16);
-
-windChill = Math.round(windChill) + "&deg;F";
-
-document.getElementById("windChill").innerHTML = windChill;
+document.getElementById("windchill").innerHTML = f.toFixed(1) + "&deg;";
