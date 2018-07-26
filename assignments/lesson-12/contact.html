@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -55,36 +56,46 @@
 
         <main>
 
-        <div class="bikes">
-            <h2>REPAIR SHOP</h2>
-            <p>YOUR MOUNTAIN MIKE NEEDS SOME WORK BEFORE HEADING OUR ON THE TRAIL? BRING IT BY AND WE'LL GET HER READY!</p>
-        </div>
-
-        <div class="repair">
-            <div><img src="images/SERVICE980350-min.jpg" alt="image01">
-                <h1>BRING YOUR BIKE TO US!</h1>
-                <ul>
-                    <li>We do all repairs on a first come first serve basis. However, most repairs are completed within 2-3 business days.</li>
-                    <li>When you bring in your bike for service, we always start with a free, no-obligation estimate of the work that will be needed. One of our bike technicians will discuss the problem with you and will carefully explain what work should be done, always respecting your choices and your budget.</li>
-                    <li>Appointments are not necessary but you can make an appointment. Just give us a call and we'll set up an appointment for you</li>
-                    <li>We do it all! From Bikes that have not seen the light of day in 30 years to the latest pro level rides.
-                        Please do not hesitate to wheel in anything you've got, we'll be able to help!  (Motorized bikes excluded, sorry)</li>
-                    <li>Our hours are:
-                        Monday - Saturday | 10AM-7PM
-                        & Sundays | 10AM-5PM</li>
-                </ul>
+            <h2>SUBSCRIBE</h2>
+            <div id="content" class="clearfix">
+                <h3>RECIEVE MONTHLY NEWSLETTERS AND SPECIAL OFFERS!</h3>
             </div>
-        </div>
+                <div class="row">
+                    <div class="left">
+
+                        <form action="FormToEmail.php" method="post" enctype="multipart/form-data" name="subscribe" id="subscribers">
+
+                            <fieldset>
+                                <legend><span>Personal Information</span></legend>
+                                <label><b><span>Fullname:</span></b><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{3,99}" required ></label>
+
+                                <label><b><span>Zip Code:</span></b><input name="zip" type="text" value="" placeholder="zip" pattern="[0-9._]{2,5}" required ></label>
+
+                                <label><b><span>Email:</span></b><input formaction="FormToEmail.html" name="email" type="email" id="storm" required ></label>
+
+                                <label><b><span>Phone:</span></b><input name="phone" type="tel" value="" placeholder="(555) 555-7890" pattern="[0-9]{10,20}" required ></label>
+                            </fieldset>
+
+                            <fieldset class="message"><p>Message:</p>
+                                <textarea rows="4" cols="38" placeholder="Type here...">
+
+                                </textarea>
+                            </fieldset>
+
+                            <input type="submit" value="Submit!" class="submitBtn">
+
+                            <input name="subject" type="hidden" value="Conference Registration" >
+                            <input name="redirect" type="hidden" value="thanksTest.html" >
+                        </form>
+                    </div>
+                </div>
 
 </main>
 
 <!-- FOOTER HERE -->
 <footer>
-    <p>&copy; 2017 &bull; <a href="theMountainSpoke.html">The Mountain Spoke</a> &bull; Hiram Todd &bull; 123-555-6789</p>
-    <p>
-        FOR OVERVIEW VIDEO
-        <a href="overviewVideo.php" target="_blank">CLICK HERE</a>.
-    </p>
+    <p>&copy; 2018 &bull; <a href="mountainspoke.html">The Mountain Spoke</a> &bull; Alan Gilliam &bull; 123-555-6789</p>
+    
 </footer>
 
 </body>
