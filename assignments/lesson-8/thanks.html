@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="page description placeholder">
+        <meta name="author" content="Alan Gilliam">
+
+        <title>CIT 230 Assignment Portal - Preston</title>
+
+        <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- STYLE SHEETS -->
+        <link href="../../Styles/normalize.css" rel="stylesheet">
+        <!-- phone-default -->
+        <link href="../../Styles/main-1.css" rel="stylesheet">
+        <!-- enhance-tablet -->
+        <link href="../../Styles/medium-7.css" rel="stylesheet">
+        <!-- enhance-desktop -->
+        <link href="../../Styles/large-7.css" rel="stylesheet">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">
+
+    </head>
+
+    <body>
+    <!-- HEADER HERE -->
+        <header class="clearfix">
+        <h1>Weather Me!</h1>
+            <h3>Know what's around you, and above!</h3>
+            <figure class="logo">
+                <img src="../../images/suncloudrain.png" alt="logo" srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x">
+            </figure>
+            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+        </header>
+
+
+    <!-- NAVIGATION HERE -->
+        <nav class="clearfix">
+            <ul class="navigation">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../lesson-7/preston-7.html">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery-7.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+
+    <!-- CONTENT HERE -->
+        <main>
+            <div id="thankyou" class="clearfix">
+                <p id="thanks">Thank you!</p></br>
+                <p id="message">We do appreciate your help in keeping our community safe from the unpredictablilties of Mother Nature!</p>
+            </div>
+        </main>
+
+    <!-- FOOTER HERE -->
+        <footer>
+           
+            <p class="footer-bar">&copy;2018 All Rights Reserved | Weather Me! | <span id="currentdate"><p id="demo"></p></span></p>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/gallery-8/currentdate.js"></script>
+        <script src="scripts/windchiill.js"></script>
+        <script src="scripts/stormSeverityRange.js"></script>
+    </body>
+
+</html>
