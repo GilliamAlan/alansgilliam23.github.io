@@ -1,24 +1,94 @@
-@media screen and (min-width: 64em){
+@media only screen and (min-width: 750px){
     
-    main {
-        width: 950px;
+    .currentconditions{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #919080;
+        border: 1px solid black;
+        font-size: .8em;
+        box-shadow: 0 0 3px black;
+    }
+
+    .currentconditions img{
+        width: 50px;
+        padding-right: 10px;
+    }
+
+    .headernav ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .headernav li:first-child{
+        display: none;
+    }
+
+    .forecast {
+        display: block;
+        max-width: 50%;
+        background-color: #919080;
+        margin: auto;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .forecast table{
+        box-sizing: border-box;
+        padding: 10px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+
+    .forecast th{
+        padding: .5rem;
+        background-color: white;
+    }
+
+    .forecast td{
+        border: 1px solid white;
+        padding: .5rem;
+    }
+
+    .forecast h3{
+        box-sizing: border-box;
+        padding-top: 20px;
+    }
+
+    .contactinfo img:first-child{
+        display: inline;
+        width: 250px;
+        float: left;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .article img{
+        float: right;
+        width: 170px;
+        box-shadow: 5px 5px 5px black; 
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .gallerygrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .townsection{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
         margin: auto;
     }
-    
-    .topnav {
-        font-size: .75em;
-    }   
-        
-    #articles {
-        display: block;
-        text-align: left;
-        margin-top: 30px;
-        clear: both;
-    } 
-    
-    article {
-        display: inline-block;
-        width: 150px;
-        padding: 20px;
-    }  
+
+    .townsection div:nth-child(2n){
+        margin-right: 20px;
+        margin-left: 20px;
+    }
 }
