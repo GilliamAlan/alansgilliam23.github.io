@@ -1,85 +1,117 @@
+
 <!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <title>Storm Center | Whatever the Weather</title>
-        <meta name="description" content="current weather information for Franklin">
-        <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/Styles/normalize.css">
-<link rel="stylesheet" href="/Styles/main-1.css">
-<link rel="stylesheet" href="/Styles/medium-7.css">
-<link rel="stylesheet" href="/Styles/large-7.css">
-<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">    </head>
-    <body>
-        <header>
-            <img src="/images/logo.png" alt="Whatever the Weather logo">
-    <h1>Whatever the Weather</h1>
-    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>        </header>
-        <nav id="mainNav" >
-            <ul id="mainmenu" class="topnav">
-        <li id="home"><a href="index.html">Home</a></li>
-        <li><a href="franklin.html">Franklin</a></li>
-        <li><a href="greenville.html">Greenville</a></li>  
-        <li><a href="springfield.html">Springfield</a></li>
-        <li><a href="stormcenter.html">Storm Center</a></li>
-        <li><a href="gallery-7.html">Gallery</a></li>
-    </ul>        </nav>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Storm Center</title>
     
-        <main>
-            <form method="post" action="https://alansgilliam23.github.io/assignments/weathersite/thanks.html">
-                <fieldset>
-                    <legend><h2>Contact Information</h2></legend>
-                    <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Type your name here" pattern="[a-zA-Z -._]{5,40}" required></label>
-                    <label><span>Email:</span><input name="email" type="email" value="" placeholder="email@yourdomain.com" required></label>
-                    <div class="displayRow">
-                        <label><span>Phone Number:</span><input name="phone" type="tel" value="" placeholder="1234567890" pattern="[0-9]{10,20}" required></label>
-                        <label><span>Zip Code:</span><input name="zip" type="number" value="" placeholder="12345" required></label>
-                    </div>
-                </fieldset>
+    <meta name="description" content="Preston practice content. Weather page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<!-- STYLE SHEETS -->
+<link href="../../Styles/normalize.css" rel="stylesheet">
+<!-- phone-default -->
+<link href="../../Styles/main-5.css" rel="stylesheet">
+<!-- enhance-tablet -->
+<link href="../../Styles/medium-5.css" rel="stylesheet">
+<!-- enhance-desktop -->
+<link href="../../Styles/large-5.css" rel="stylesheet">
+<!-- fonts awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="scripts/responsiveMenu.js" defer></script>
+<script type="text/javascript" src="scripts/dateScript.js" async></script>
+<script type="text/javascript" src="scripts/windChill.js" async></script>
+<script type="text/javascript" src="scripts/rankStorm.js" async></script>
+
+
+</head>
+<body>
+<!--  HEADER HERE -->
+    <header>
+        <h1>Weather Central</h1>
+        
+      
+
+    </header>
+
+
+<!-- NAVIGATION HERE -->
+    <nav>
+        
+        <ul id="primaryNavigation" class="hide">
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="preston-7.html">Preston</a></li>
+            <li><a href="sodasprings.html">Soda Springs</a></li>
+            <li><a href="fishhaven.html">Fish Haven</a></li>
+            <li class="active"><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery-7.html">Gallery</a></li>
+        </ul>
+
+    </nav>
+
+
+<!-- CONTENT HERE -->
+    <main>
+        <h1>Storm Center <i class="fa fa-umbrella" style="font-size: 40px;"></i></h1>
+        <div class="left">
+        <form action="thanks.html" name="weather" id="situation">
+            <fieldset>
+            <legend><span>Personal Information</span></legend>
+                <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required></label>
+                <label><span>Email:</span><input name="email" type="email" value="" placeholder="storm@gmail.com" required></label>
+                <label><span>Phone:</span><input name="phone" type="tel" value="" placeholder="2108675309" pattern="[0-9]{10}" required></label>
+                <label><span>Zip Code:</span><input name="zipcode" type="number" placeholder="zipcode" required></label>
+            </fieldset>
+            <fieldset>
+            <legend><span>Storm Information</span></legend>
+                <label><span>Storm Date:</span><input name="date" type="date"></label><br>
+                <span>Storm Type:</span>
+                <input type="text" name="stormType" list="storms">
+                <datalist id="storms">
+                    <option value="Flash Flood">
+                    <option value="Hail">  
+                    <option value="Hurricane">
+                    <option value="Thunderstorm">
+                    <option value="Tornado">
+                </datalist><br><br>
+
+                <label for="ranking">Severity (1 to 10)</label><input type="range" id="ranking" value="5" min="1" max="10" step="1" oninput="adjustRanking(this.value)" onchange="adjustRanking(this.value)"><span id="rankingvalue"> 5</span><br><br>
+                
+                <span>Storm Region:</span>
+                <input type="text" name="stormRegion" list="regions" placeholder="Select Region">
+                <datalist id="regions">
+                    <option value="Preston">
+                    <option value="Soda Springs">    
+                    <option value="Fish Haven">
+                </datalist>
+            </fieldset>               
+            <fieldset>
+                <legend><span>Are you in danger?</span></legend>
+                <label><span>Are you in danger?</span></label>
+                <input type="radio" name="UserInDanger" value="yes"> Yes!<br>
+                <input type="radio" name="UserInDanger" value="kinda"> Kinda<br>
+                <input type="radio" name="UserInDanger" value="nope"> Nope<br>    
+                <br>
+                <textarea rows="5" cols="50" name="comment" form="situation">Any additional information....</textarea>
+            </fieldset>
             
-                <fieldset id="stormInfo">
-                    <legend><h2>Storm Information</h2></legend>
-                    <div class="displayRow">
-                        <label><span>Storm Date:</span><input name="stormdate" type="date" value=""></label>
-                        <label>
-                            <span>Storm Type:</span>
-                            <input name="stormtype" list="type">
-                            <datalist id="type">
-                                <option value="Flash Flood">
-                                <option value="Hail">
-                                <option value="Hurricane">
-                                <option value="Thunderstorm">
-                                <option value="Tornado">
-                            </datalist>
-                        </label>
-                        <label><span>Storm Severity:</span><span id="ratingvalue">5</span><input type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"></label>
-                        <label><span>Storm Region:</span>
-                            <select>
-                              <option value="select" disabled>Select Region</option>
-                              <option value="franklin">Franklin</option>
-                              <option value="greenville">Greenville</option>
-                              <option value="springfield">Springfield</option>
-                            </select></label>
-                            <label><span>Are you in danger?</span></label>
-                                  <input type="radio" name="dangerYes" value="yes"> Yes
-                                  <input type="radio" name="dangerMaybe" value="maybe"> Maybe
-                                <input type="radio" name="dangerNo" value="no"> No
-                    </div>
-                    <label><span>Additional Information or Comments:</span><textarea placeholder="Comments" rows="6"></textarea></label>
-                </fieldset>
-            
-                <input name="submit" type="submit" value="Submit" class="submitButton">
-                            
-            </form>
-            
-        </main>
-        <footer>
-            <p>Contact Information</p>
-    <p>&copy; 2018 | Alan Gilliam | <a href="#">Terms of Use</a> | <span>Friday, June 29, 2018</span></p>         </footer>
-        <script src="/scripts/currentdate.js" type="text/javascript"></script>
-        <script src="/scripts/hamburger.js"></script>
-        <script src="/scripts/rating.js"></script>
-        <script src="/scripts/wayfinder.js"></script>
-    </body>
+            <input type="submit" value="Submit" class="submitBtn">
+        </form>
+        
+        </div>
+    </main>
+
+<!-- FOOTER HERE -->
+    <footer>
+		<p>&copy; 2018 Alan Gilliam &bull; Homework Lesson 08 - Preston Weather page  &bull; <span id="displayDate"></span></p>
+    </footer>
+
+</body>
+  
 </html>
