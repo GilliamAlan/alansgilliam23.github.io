@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
@@ -13,10 +12,16 @@
 <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">    </head>
     <body>
-        <header>
-            <img src="../../images/suncloudrain.png" alt="Whatever the Weather logo">
-    <h1>Whatever the Weather</h1>
-    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>        </header>
+         <header>
+        <img src="../../images/sun.png" alt="Sun Logo">
+        <div class="headertext">
+            <h1>Whatever the weather</h1>
+            </div>
+        <div class="currentconditions">
+            <img src="../../images/suncloudrain.png" alt="Cloud Icon">
+        
+        </div>
+    </header>
         <nav id="mainNav" >
             <ul id="mainmenu" class="topnav">
         <li id="home"><a href="index.html">Home</a></li>
@@ -27,29 +32,10 @@
         <li><a href="gallery-7.html">Gallery</a></li>
     </ul>        </nav>
 
-<script type="text/javascript" src="scripts/responsiveMenu.js" defer></script>
-<script type="text/javascript" src="scripts/dateScript.js" async></script>
-<script type="text/javascript" src="scripts/windChill.js" async></script>
-<script type="text/javascript" src="scripts/rankStorm.js" async></script>
 
 
 
 <body>
-
-
-<!-- NAVIGATION HERE -->
-    <nav>
-        
-        <ul id="mainmenu" class="topnav">
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="preston-7.html">Preston</a></li>
-            <li><a href="sodasprings.html">Soda Springs</a></li>
-            <li><a href="fishhaven.html">Fish Haven</a></li>
-            <li class="active"><a href="stormcenter.html">Storm Center</a></li>
-            <li><a href="gallery-7.html">Gallery</a></li>
-        </ul>
-
-    </nav>
 
 
 <!-- CONTENT HERE -->
@@ -105,7 +91,7 @@
 
 <!-- FOOTER HERE -->
     <footer>
-		<p>&copy; 2018 Alan Gilliam &bull; Homework Lesson 08 - Preston Weather page  &bull; <span id="displayDate"></span></p>
+		<p>&copy; 2018 Alan Gilliam &bull; &bull; <span id="displayDate"></span></p>
     </footer>
 
 </body>
