@@ -1,19 +1,20 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <title>Weather Image Gallery | Whatever the Weather</title>
-        <meta name="description" content="current weather information for Preston">
-        <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../../styles/normalize.css">
-<link rel="stylesheet" href="../../styles/main-1.css">
-<link rel="stylesheet" href="../../styles/medium-7.css">
-<link rel="stylesheet" href="../../styles/large-7.css">
-<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">    </head>
-    <body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Southeast Idaho Weather Website | Preston, Idaho" >
+    <link rel="stylesheet" href="../../styles/normalize.css">
+    <link rel="stylesheet" href="../../styles/main-1.css">
+    <link rel="stylesheet" href="../../styles/medium-7.css">
+    <link rel="stylesheet" href="../../styles/large-7.css">
+    <title>Weather Groundhog</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  </head>
+  <body>
     <header>
-        <img src="../../images/sun.png" alt="Sun Logo">
+      <img src="../../images/sun.png" alt="Sun Logo">
         <div class="headertext">
             <h1>Whatever the weather</h1>
         
@@ -22,8 +23,12 @@
             <img src="../../images/suncloudrain.png" alt="Cloud Icon">
         
         </div>
+        <div class="currentconditions">
+        
+            <p><span id="headercurrent"></span></p> 
+        </div>
     </header>
-        <nav id="mainNav" >
+    <nav id="mainNav" >
             <ul id="mainmenu" class="topnav">
         <li id="home"><a href="index.html">Home</a></li>
         <li><a href="preston.html">Preston</a></li>
@@ -31,42 +36,69 @@
         <li><a href="springfield.html">Fish Haven</a></li>
         <li><a href="stormcenter.html">Storm Center</a></li>
         <li><a href="gallery-7.html">Gallery</a></li>
-    </ul>        
-    </nav>
+    </ul>        </nav>
     <main class="container">
+        <h2>Preston, Idaho</h2>
+        <div class="heroheader">
+                <img src="../../images/preston.jpg" alt="Preston Idaho" sizes="61vw" srcset="images/preston.jpg 750w, images/preston.jpg 450w" class="prestonimage">
+            <section class="weathersummary">
+              <h3>Weather Summary</h3>
+              <div class="weatherdetails">
+                <p class="label">Currently: <span id="current"></span></p>
+                <br>
+                <p class="label">Temperature:</p>
+                <p class="value"><span id="currenttemp"></span> &deg;F</p>
+                <br>
+                <p class="label">Humidity: <span id="humidity"></span>%</p>
+                <br>
+                <p class="label">Precipitation: <span id="preciptiation"></span>2 inches</p>
+                <br>
+                <p class="label">Wind Speed:</p>
+                <p class="value"><span id="windspeed"></span> mph</p>
+                <br>
+                <p class="label">Wind Chill:</p>
+                <p class="value"><span id="chill"></span>&deg;F</p>
+              </div>
+            </section>
+          </div>
+          <section class="forecast">
+            <h3>High Temperature Forecast</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                  <th>Sun</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Forecast</th>
+                  <td><span id="wed"></span>&deg;F</td>
+                  <td><span id="thu"></span>&deg;F</td>
+                  <td><span id="fri"></span>&deg;F</td>
+                  <td><span id="sat"></span>&deg;F</td>
+                  <td><span id="sun"></span>&deg;F</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        <article class="article">
+          <img src="images/snowstorm.jpg" alt="Snow Storm">
+          <h3>Big snowstorm forecast to dump up to a foot of snow on East Idaho starting Tuesday</h3>
+          <p>Article by the Idaho State Journal Staff</p>
+          <p>Eastern Idahoans will likely have more snow to shovel on Tuesday and Wednesday as another big winter storm barrels through the region.</p>
+          <p>This new storm comes on the heels of the multi-day storm that delivered a snowy Ocotber and blizzard conditions to Idaho.</p>
+          <p>The National Weather Service confirmed that this Friday to Halloween storm was the most powerful of the season thus far to hit East Idaho, dumping over 2 feet of snow on some areas.</p>
+        </article>
        
-
-        <div class="townsection">
-            <div>
-                <h3>Preston</h3>
-                <p class="motto"><span id="pmotto"></span></p>
-                <img src="../../images/image1.jpg" alt="Idaho">
-                <p>Year Founded: <span id="pyear"></span></p>
-                <p>Population: <span id="ppopulation"></span></p>
-                <p>Annual Rain: <span id="prainfall"></span> inches</p>
-            </div>
-            <div>
-                <h3>Soda Springs</h3>
-                <p class="motto"><span id="smotto"></span></p>
-                <img src="../../images/image2.jpg" alt="Idaho">
-                <p>Year Founded: <span id="syear"></span></p>
-                <p>Population: <span id="spopulation"></span></p>
-                <p>Annual Rain: <span id="srainfall"></span> inches</p>
-            </div>
-            <div class="div3">
-                <h3>Fish Haven</h3>
-                <p class="motto"><span id="fmotto"></span></p>
-                <img src="../../images/image3.jpg" alt="Idaho">
-                <p>Year Founded: <span id="fyear"></span></p>
-                <p>Population: <span id="fpopulation"></span></p>
-                <p>Annual Rain: <span id="frainfall"></span> inches</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-            <p>&copy; 2018 | Alan Gilliam | <a href="#">Terms of Use</a> | <span id="date"></span></p> 
-        <span id="currentdate"></span>
-    </footer>
+      </main>
+     <footer>
+            <p>Contact Information</p>
+    <p>&copy; 2018 | Alan Gilliam | <a href="#">Terms of Use</a> | <span>Friday, June 29, 2018</span></p>         </footer>
   <script src="../../scripts/currentdate.js"></script>
   <script src="../../scripts/menu.js"></script>
   <script src="../../scripts/windchill.js"></script>
