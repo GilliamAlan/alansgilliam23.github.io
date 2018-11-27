@@ -1,94 +1,66 @@
-/*========= Page Layout ===========*/
-
-@media screen and (min-width: 64em){
-    
-    main {
-        width: 900px;
-        margin: auto;
+@media only screen and (min-width: 64em) {
+    .articleImg {
+        float: right;
+        width: 35%;
+        margin: 10px;
+        box-shadow: 4px 7px 15px 0px rgba(0, 0, 0, 0.75);
     }
-    
-    .topnav {
-        font-size: 1em;
-    }  
-    
-    #news {
-        display: flex;
-        flex-direction: column;
+    article {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
     }
-    
-    #news article {
-        
-        width: 250px;
-        padding: 0px 20px 0px 20px
-    }
-    
-    #photo {
-    display: flex;
-    }
-    
-        
-    #articles {
-        display: flex;
-        justify-content: center;
-        text-align: left;
-        clear: both;
-    } 
-    
-    #cityStats article {
-        width: 225px;
-        padding: 20px;
-    } 
-
-/*========= Home Page Layout ===========*/
-    
-    #mainArticle {
-      display: flex;
-      flex-direction: row-reverse;
-      }  
-    
-    #mainArticle img {
-        padding-right: 30px;
-        padding-left: 20px;
-    }    
-
-    #cityStats {
-        width: 900px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: left;
-        margin: auto;
-    }
-    
-    .cityBlock {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cityBlock img{
-        padding: 0px 20px 0px 20px;
-    }
-    
-    .cityBlock article {
-        padding-bottom: 0px;
-    }
-    
-/*========= Gallery Layout ===========*/
-
-    #galleryImg {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;  
+    .forecast {
+        background-color: rgba(223, 220, 227, .75);
+        border: 1px solid rgb(208, 205, 212);
+        display: block;
+        margin-top: 20px;
         text-align: center;
-        margin-left: 20px;
+        padding: 20px;
     }
-
-    #galleryImg figure {
-        padding: 5px;
+    table {
+        margin: auto;
+        border: 1px solid black;
     }
-    
-    #galleryImg figure:hover {
-        box-shadow: 5px 5px 10px gray;
+    th {
+        background-color: rgba(246, 180, 49, .75);
+        padding: 3px;
     }
-    
+    td {
+        padding: 3px;
+        border: 1px solid rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    #contact {
+        border: 1px solid rgb(208, 205, 212);
+        margin-top: 20px;
+    }
+    .station-img {
+        display: flex;
+        width: 30%;
+        height: auto;
+        margin: 10px;
+    }
+    iframe {
+        width: 30%;
+        height: auto;
+    }
+    footer {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+        background-color: rgb(74, 189, 172);
+        padding: 15px 0;
+        font-size: .8rem;
+    }
+    .wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    figure, figure>img {
+        border-radius: 10px;
+    }
+    figure:hover {
+        box-shadow: 2px 7px 14px 5px rgba(0, 0, 0, 0.75);
+    }
 }
