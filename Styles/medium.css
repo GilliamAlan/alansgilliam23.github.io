@@ -1,82 +1,100 @@
-@media only screen and (min-width: 37.5em) {
-    ul {
-        display: flex;
-    }
-    li a {
-        border: none;
-        border-right: 1px solid rgba(180, 133, 39, 0.5);
-        padding: 5px;
-    }
-   li.active a{
-        background-color: rgb(182, 157, 19);
-        color: white;
-    }
-    li a:hover, li.active a:hover {
-        background-color: rgb(145, 124, 7);
-        color: white;
-    }
-    .hide {
-        display: flex;
-        justify-content: center;
-    }
-    .navBtn {
-        display: none;
-    }
-    .home {
-        border-left: 1px solid rgba(180, 133, 39, 0.5);
-    }
-    .menu {
-        display: none;
-    }
-    header {
-        flex-direction: row;
-        justify-content: center;
-    }
-    #current-condition {
-        display: flex;
-        margin-left: 5%;
-        padding: 5px;
-        border-radius: 20px;
-        box-shadow: -1px 3px 10px 0px rgba(0,0,0,0.75);
-        background-color: rgba(246, 180, 49, 0.7); 
-    }
-    #condition-text {
-        align-self: center;
-        color: rgb(155, 114, 32);
-        font-weight: bold;
-    }
-    .wrapper {
-        grid-template-columns: 1fr 1fr;
-    }
-    fieldset {
-        border: 1px solid #4abdac;
-        border-radius: 10px;
-    }
-    .grid {
-        max-width: 640px;
-    }
-    .fireImg { 
-        margin-top: 30px;
-        border-radius: 5px;
-    }
-    .weatherstory {
-        margin-bottom: 2rem;
-        box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
+/*========= Page Layout ===========*/
 
+@media only screen and (min-width: 37.5em) {
+
+/*========= Header Layout ===========*/
+ 
+    header {   
+        margin: 0 auto; 
+        max-width: 900px;
     }
-    .towns {
-        max-width: 640px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
+    
+    h1 { 
+        text-align: center; 
+        font-size: 2em;
+        }
+        
+    h3 {
+        color: #12ab4b;
     }
-    .townstyle {
-        background-color: rgba(223, 220, 227, .75);
-        border: 1px solid rgb(208, 205, 212);
-        box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
-    }
-    .townImg {
-        width: 100%;
-        border-radius: 5px;
+    
+/*========= Top Navigation Layout ===========*/
+        
+    .hamburger { 
+        display: none; 
+        }
+        
+    #mainNav {
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #f28731;
+        border-top: 1px solid #f28731; 
         
     }
+    
+    .topnav {  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        font-size: .75em;
+        overflow: hidden; 
+        border-top: none; 
+        }
+            
+    .topnav li { 
+        display: flex;
+        border-bottom: none;
+        }
+        
+    .topnav a { 
+        display: flex; 
+        flex-direction: row;
+        text-decoration: none;
+        }
+        
+    .topnav a:hover {   
+        color: #24408e;   
+        }
+    
+/*========= Forecast Layout ===========*/
+ 
+    #forecast {
+        display: inline;
+    }
+    
+    #forecast h3 {
+        margin-top: 15px;
+        padding-left: 20px;
+    }
+    
+    #tenday {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+        padding: 0px 10px 0px 10px;
+        margin-top: 10px;
+    }
+    
+    #tenday li {
+       text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        background: #24408e;
+    }
+    
+/*========= Gallery Layout ===========*/
+
+    
+    #galleryImg {
+        max-width: 600px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    figure {
+        margin: 5px;
+        max-width: 250px;
+    }
+    
 }

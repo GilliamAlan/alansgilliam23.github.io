@@ -1,181 +1,511 @@
-* { box-sizing: border-box; outline:none!important}
-
 body {
-  font-size: 16px;
-  font-family: 'Merriweather Sans', sans-serif;
-  color: #01172d;
-  font-style: italic;
-background: rgba(255,255,255,1);
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,252,255,1) 20%, rgba(0,83,138,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(20%, rgba(255,252,255,1)), color-stop(100%, rgba(0,83,138,1)));
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,252,255,1) 20%, rgba(0,83,138,1) 100%);
-background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,252,255,1) 20%, rgba(0,83,138,1) 100%);
-background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,252,255,1) 20%, rgba(0,83,138,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,252,255,1) 20%, rgba(0,83,138,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00538a', GradientType=0 );
+    font-family: 'Arvo', serif;
+    font-size: 18px;
 }
 
-header, nav, main, footer { 
-   	 max-width: 100%; 
-   	 margin: 0% 0.5%;
-    	width: 99%;
+header {
+    background-color: #526290;
+    text-align: center;
+    padding: 1em;
+    color: white;
+    display: flex;
+    flex-flow: row;
 }
 
- section.section-half{ padding:0% 10%; width:80%}
-
-header { margin-bottom:30px!important; display: flex !important;  }
-header div h1 {  width: calc(100% - 150px);  font-size:24px; font-style: italic;  margin: 5px 0px 10px 0px;}
-header div img { margin-right:10px; width:110px }
-header div .subheading { margin:0px;  font-size:16px;  font-style: italic;}
-
-nav { background-color: #002f5f}
-nav button { width:100%; color:#FFF;border:0px; font-size: 20px;padding:10px 0px;text-align:left; background-color: #929292;}
-nav button i{margin-left:5px;color:#FFF;}
-
-
-
-.flex-container {
-
- display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-
-}
-.responsive{display:block!important}
-
-.gallery {
-  display: grid;
-  grid-template-columns: auto;
-}
-.gallery div {
-display: flex;
-height:300px;
-background-repeat: no-repeat;
-background-size: cover;
-border:0px;
-}
-.gallery span{
-width: 100%;
-background: #000000B3;
-text-align: center;
-align-self: flex-end;
-color: #FFF;
-padding: 15px 0px;
+header h1 {
+    font-size: 2.5rem;
 }
 
-.home-grid{
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-grid-gap: 30px;
-margin: 2% 4%;
-width: 92%;
-}
-.home{
-height: 300px;
-overflow: auto
-}
-.home-grid article{
-box-shadow: 1px 1px 10px #959595;
-border-radius: 3px;
-padding: 5px;
-font-size: 13px;
-text-align:center;
-}
-.home-grid article h2{
-color: #f99531;
+header h2 {
+    font-size: 1.5rem;
+    color: #FF946C;
+    font-style: italic;
 }
 
-.home-grid article ul{
-width: 100%;
-margin: 20px 0px;
-padding: 0px;
+header picture {
+    margin: 1rem;
+    padding: .5rem;
+    flex: 0 1 100px;
+}
+
+header picture img {
+    width: 100%;
+    height: auto;
+}
+
+.headerText {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1, h2 {
+    margin: .25rem;
+}
+
+.column {
+    margin: 0 4rem 0 0;
+    padding: .5rem;
+    display: none;
+    color: white;
+    background-color: #526290;
+    font-size: 1.1em;
+    border: 2px solid white;
+}
+
+
+.column picture img {
+    width: 75px;
+    height: auto;
+    margin: -20px;
+
+}
+
+.column p:not(#description) {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+main h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #526290;
+    margin: 1rem;
+}
+
+nav {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    background-color: #ea8863;
+    box-shadow: 0px 3px 3px gray;
+}
+
+nav button {
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-family: 'Arvo', serif;
+    font-size: 1.2rem;
+    color: white;
 }
 
 nav ul {
-  font-size: 16px;
-    display:none;
     width: 100%;
-    list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-border-radius:5px
-}
-
-nav ul li {
-    
-  width:auto;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column;
 }
 
 nav ul li a {
-    display: block;
-    color: #FFF;
-    text-align: center;
-    padding: 10px 16px;
-    font-style: normal;
+    display: flex;
+    padding: .6rem 2%;
     text-decoration: none;
-}
-  nav ul li a:hover{
-	background: #0009;
+    color: white;
+    border-top: 1px solid rgba(0, 0, 0, .3)
 }
 
- .activedmenu{
-	background: #fff6;
+.site-navigation li {
+    display: none;
+}
 
+.site-navigation li:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+nav a:visited {
+    color: #526290;
+}
+
+.primaryNav {
+    position: relative;
+}
+
+.primaryNav li {
+    background-color: #ea8863;
+    display: block;
+    width: 100%;
+    margin: 2px 0;
+    padding: 0;
+}
+
+.primaryNav li a {
+    padding: 1rem;
+    text-align: center;
+    display: block;
 }
 
 nav ul li a:hover {
-    color: #FFF;
+    background-color: rgba(0, 0, 0, .1);
+    color: white;
 }
 
-nav ul li:last-child a {
-   border-right:0px;
+nav a {
+    text-decoration: none;
 }
 
-main { background:#FFF; border-radius:5px; padding-bottom:50px}
-main h1 {margin-top:15px; text-transform: capitalize}
-main h2 {width:100%; text-transform: capitalize}
-main figure {  margin: 0%; }
-main figure img { width:100%;}
-section.section-half img{border-radius:10px;width:250px;height:auto; }
+.weathersummary {
+    padding: .5rem;
+    box-sizing: border-box;
+    max-width: 60em;
+    top: -8px;
+    left: 5px;
+    background-color: #526290;
+    box-shadow: 0 0 40px #444;
+    width: 190px;
+    position: absolute;
+}
 
-section.forecast {display:none} 
-section.forecast{width:100%;margin-top:30px; float:left}
-section.forecast table {
-    width:100%;
-    text-align:center;
+.weathersummary>h3 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: .25rem;
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+.weathersummary p {
+    line-height: 1.2;
+    padding: .1rem;
+    margin: 0;
+    font-size: .6rem;
+}
+
+.weatherdetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .2rem;
+}
+
+.label {
+    color: #ea8863;
+    font-weight: bold;
+}
+
+.value {
+    color: white;
+    font-weight: bold;
+}
+
+.forecast {
+    display: none;
+    margin: 1rem auto;
+    background-color: #526290;
+    text-align: center;
+    padding: 1em;
+}
+
+.forecast h3 {
+    color: white;
+    font-size: 1.2em;
+    padding-top: 7px;
+    margin-top: -5px;
+}
+
+.forecast table {
+    margin: 0 auto;
     border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    height: 30px;
+    padding: 15px;
+    background-color: #ea8863;
+    ;
+    color: black;
+}
+
+td {
+    color: white;
+}
+
+/*-------------- ARTICLE --------------*/
+
+article {
+    background-color: #b4c1eb;
+    padding: 10px;
+    margin: 1rem auto;
+}
+
+article h3 {
+    padding: 0;
+}
+
+.author {
+    margin-top: -20px;
+    font-style: italic;
+    font-size: .75em;
     width: 100%;
-    font-style:normal;
-}
-section.forecast table td, main .forecast table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-section.forecast table tr {background-color: #f2f2f2;}
-section.forecast table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #929292;
-    color: #000;
 }
 
-section.history{margin-top:30px; width:100%;}
-section.history div {
-    -webkit-flex-flow: wrap;
-    flex-flow: wrap;
+/*---------------- FOOTER ------------*/
+
+footer {
+    clear: both;
+    background-color: #526290;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 1px;
 }
-section.history img{ width:100%; height:auto;align-self: center;border-radius:10px; margin-bottom:5px}
 
-#stormCenter {	width:90%;min-width:250px;margin:0 auto;}
-#stormCenter input, select { margin: 15px 30px; font-size:.8em; color: #3377bb; padding: .5rem; vertical-align: middle;}
-#stormCenter label { width: 400px; text-align:right;}
-#stormCenter fieldset {margin:20px 0px; padding:0px; border:0px}
-#stormCenter textarea{width:90%;height:200px}
-#stormCenter .submit{background-color: #002f5f; color:#FFF; border:0px; border-radius:4px;font-size:22px}
-.required{color:red}
+/*------------ BOTTOM -------------*/
 
-footer{width:100%;margin-top:30px!important;  background:#FFF; border-radius:5px}
-footer div.section-copyright{width:100%; background-color: #002f5f; color:#FFF;padding:5px 0px;text-align:center;color:#FFF}
+.bottom {
+    background-color: #788cc7;
+    width: 100%;
+    max-height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.bottomimage img {
+    display: none;
+    width: 10em;
+    padding: 15px;
+    margin-top: 1rem;
+    margin-left: 2px;
+}
+
+.contact {
+    padding: 10px;
+    text-align: center;
+}
+
+.contact img {
+    width: 5%;
+    height: auto;
+}
+
+.mappicture picture img {
+    width: 10em;
+    padding: 15px;
+    margin-top: 1.5rem;
+}
+
+/*---------------- FORM ------------*/
+
+form fieldset {
+    margin: 2rem 0;
+    border: 1px solid #526290;
+    border-radius: 10px;
+    padding: .5rem 2%;
+}
+
+form legend {
+    color: #526290;
+    margin: 0 1rem;
+    padding: 0 .5rem;
+    font-size: 1.5rem;
+}
+
+.danger {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+form label.top, form div {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: .1rem;
+    color: #ea8863;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+form label.top input, form label.top select, form textarea {
+    -webkit-appearance: none;
+    display: block;
+    font-size: 1rem;
+    border: solid 1px #999;
+    border-radius: 4px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 20rem;
+    background-color: rgba(82, 98, 144, 0.1);
+}
+
+form label.sbs {
+    display: block;
+    padding: .75rem 0;
+    color: #ea8863;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form input.submitBtn {
+    border: none;
+    background-color: #ea8863;
+    color: white;
+    border-radius: 4px;
+    padding: .75rem;
+    margin: 0 0 2rem 2%;
+    width: 75%;
+    max-width: 15rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#rating {
+    padding: .5rem;
+    margin: 2%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #526290;
+    border-radius: 25%;
+}
+
+.stormslider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: .5rem;
+    background: #ea8863;
+    outline: none;
+    opacity: 0.7;
+}
+
+.stormslider:hover {
+    opacity: 1;
+}
+
+.stormslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #526290;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.stormslider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #526290;
+    cursor: pointer;
+}
+
+form label.top input:required {
+    background-color: rgba(178, 35, 35, 0.1);
+}
+
+form label.top input:required:valid {
+    background-color: rgba(82, 98, 144, 0.1);
+}
+
+/*----------------THANK YOU-----------------*/
+
+#thanks {
+    margin: 2%;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #526290;
+}
+
+/*--------------- GALLERY -----------*/
+
+.gallerycontainer {
+    display: grid;
+}
+
+.gallerycontainer figcaption {
+    max-width: 100%;
+    font-style: italic;
+    font-size: .75rem;
+    padding-top: .50rem;
+}
+
+.gallerycontainer figure img {
+    max-width: 100%;
+}
+
+/*------------------ TOWN INFO ---------------*/
+
+.townContainer {
+    display: grid;
+    justify-items: center;
+    max-width: 60%;
+    margin-left: 4%;
+}
+
+.townContainer img {
+    max-width: 90%;
+    margin-left: 3%;
+    padding: 2%;
+}
+
+.townContainer h4 {
+    text-align: center;
+    color: #ea8863;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.townContainer .motto {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 90%;
+    margin-left: 4%;
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
+.townContainer .stats {
+    color: white;
+    font-weight: normal;
+}
+
+.townContainer p {
+    color: #ea8863;
+    font-weight: bold;
+    padding: 1%;
+    margin: 5%;
+}
+
+.townContainer section {
+    border: 7px solid #ea8863;
+    background-color: #526290;
+    padding: .2rem;
+    margin-bottom: .75rem;
+    width: 100%;
+}
+
+.sodaSpringsInfo .motto {
+    padding-bottom: 0;
+}
