@@ -1,48 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Assignment Preston Town Page for CIT 230: Web Frontend Development | BYU-Idaho.">
-	<title>CIT 230 Assignment Preston Town Page | Alan Gilliam | BYU-Idaho</title>
-	<link href="https://fonts.googleapis.com/css?family=Lobster+Sans%7cRoboto" rel="stylesheet">
-	<link href="/styles/normalize.css" rel="stylesheet">
-	<link href="/styles/small.css" rel="stylesheet">
-	<link href="/styles/medium.css" rel="stylesheet">
-	<link href="/styles/large.css" rel="stylesheet">
-	
-
-</head>
-
-<body>
-	<header>
-
-		<img src="/images/sun.png" alt="Your Weather logo">
-
-		<div class="headertext">
-			<h1>Your Weather</h1>
-			<div class="subheading">The best place to check the weather conditions in this area</div>
-		</div>
-
-		<div id="currentconditions">
-			<img id="conditionsnow" src="/images/suncloudrain.png" alt="Current condition weather icon">
-			<p><span id="now"> </span></p>
-		</div>
-
-	</header>
-
-	<nav>
-		<button class="hamburger" onclick="toggleHam()">&#9776;</button>
-		<ul class="navigation">
-			<li><a href="index.html">Home</a></li>
-            <li><a href="fishhaven.html">Fish Haven</a></li>
-            <li><a href="preston.html">Preston</a></li>
-            <li><a href="sodasprings.html">Soda Springs</a></li>
-            <li><a href="stormcenter.html">Storm Center</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-		</ul>
-	</nav>
+<html lang="en-US">
+    <head>
+        <title>Weather Image Gallery | Whatever the Weather</title>
+        <meta name="description" content="current weather information for Preston">
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/small.css">
+<link rel="stylesheet" href="/styles/medium.css">
+<link rel="stylesheet" href="/styles/large.css">
+<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">    </head>
+    <body>
+    <header>
+        <img src="/images/sun.png" alt="Sun Logo">
+        <div class="headertext">
+            <h1>Whatever the weather</h1>
+        
+        </div>
+        <div class="currentconditions">
+            <img src="/images/suncloudrain.png" alt="Cloud Icon">
+        
+        </div>
+    </header>
+        <nav id="mainNav" >
+            <ul id="mainmenu" class="topnav">
+        <li id="home"><a href="index.html">Home</a></li>
+        <li><a href="preston.html">Preston</a></li>
+        <li><a href="sodasprings.html">Soda Springs</a></li>  
+        <li><a href="fishhaven.html">Fish Haven</a></li>
+        <li><a href="stormcenter.html">Storm Center</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>        </nav>
 
 	<main>
 		<h2>
