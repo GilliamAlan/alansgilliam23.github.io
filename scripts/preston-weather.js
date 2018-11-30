@@ -1,24 +1,32 @@
-let weatherObject = new XMLHttpRequest();
-let weatherURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=92a74429686969d072af8620a219e47d&units=imperial'
-weatherObject.open('GET', weatherURL, true);
+//This file pushes api to the Weather Summary//
+let weatherSource = new XMLHttpRequest();
+let url = "https://api.openweathermap.org/data/2.5/weather?id=5604473&appid=928cdffb6f7b8cf5714b4c2f8047e814&units=imperial";
 
-weatherObject.send();
+weatherSource.open("GET", url, true);
 
-weatherObject.onload = function () {
-    let weatherInfo = JSON.parse(weatherObject.responseText);
+weatherSource.send();
 
-    let iconsrc = "https://openweathermap.org/img/w/" + weatherInfo.weather[0].icon + ".png";
-    document.getElementById('condition-img').src = iconsrc;
-    document.getElementById('condition-text').innerHTML = weatherInfo.weather[0].description;
-    document.getElementById('currentCondition').innerHTML = weatherInfo.weather[0].description;
-    document.getElementById('temp').innerHTML = weatherInfo.main.temp;
-    document.getElementById('humidity').innerHTML = weatherInfo.main.humidity;
-    document.getElementById('speed').innerHTML = weatherInfo.wind.speed;
+weatherSource.onload = function () {
+    let weatherInfo = JSON.parse(weatherSource.responseText);
+    console.log(weatherInfo);
 
-    let temp = parseFloat(document.getElementById("temp").innerHTML);
-    let speed = parseFloat(document.getElementById("speed").innerHTML);
-    let chill = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
-    let number = parseFloat(Math.round(chill * 100) / 100).toFixed(2);
+    document.getElementById("rightnow").innerHTML = weatherInfo.weather["0"].description;
+    document.getElementById("precip").innerHTML = weatherInfo.weather["0"].description;
+    document.getElementById("currenttemp").innerHTML = weatherInfo.main.temp;
+    document.getElementById("humid").innerHTML = weatherInfo.main.humidity;
+    document.getElementById("windspeed").innerHTML = weatherInfo.wind.speed;
 
-    document.getElementById("windChill").innerHTML = number;
+    let weatherIcon = weatherInfo.weather["0"].icon;
+    let iconLocation = "https://openweathermap.org/img/w/" + weatherIcon + ".png";
+
+    document.getElementById("conditionsnow").src = iconLocation;
+    document.getElementById("now").innerHTML = weatherInfo.weather["0"].main;
+
+    //I embedded this code to calculate windchill properly//
+
+    let currenttemp = parseFloat(document.getElementById('currenttemp').innerHTML);
+    let windspeed = parseFloat(document.getElementById('windspeed').innerHTML);
+    var f = 35.74 + 0.6215 * currenttemp - 35.75 * Math.pow(windspeed, 0.16) + 0.4275 * currenttemp * Math.pow(windspeed, 0.16);
+    document.getElementById("windchill").innerHTML = Math.round(f);
+
 }
