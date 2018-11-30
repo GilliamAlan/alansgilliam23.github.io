@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Southeast Idaho Weather Website | Preston, Idaho" >
-    <link rel="stylesheet" href="../../styles/normalize.css">
-    <link rel="stylesheet" href="../../styles/small-5.css">
-    <link rel="stylesheet" href="../../styles/medium-7.css">
-    <link rel="stylesheet" href="../../styles/large-7.css">
-    <title>Whatever The Weather</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-  </head>
-  <body>
+    <head>
+        <title>Weather Image Gallery | Whatever the Weather</title>
+        <meta name="description" content="current weather information for Preston">
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles/normalize.css">
+<link rel="stylesheet" href="/styles/small-5.css">
+<link rel="stylesheet" href="/styles/medium-7.css">
+<link rel="stylesheet" href="/styles/large-7.css">
+<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Khula" rel="stylesheet">    </head>
+    <body>
     <header>
-      <img src="../../images/sun.png" alt="Sun Logo">
+        <img src="/images/sun.png" alt="Sun Logo">
         <div class="headertext">
             <h1>Whatever the weather</h1>
         
         </div>
         <div class="currentconditions">
-            <img src="../../images/suncloudrain.png" alt="Cloud Icon">
+            <img src="/images/suncloudrain.png" alt="Cloud Icon">
         
-        </div>
-        <div class="currentconditions">
-        
-            <p><span id="headercurrent"></span></p> 
         </div>
     </header>
     <nav id="mainNav" >
@@ -86,7 +82,7 @@
             </table>
           </section>
         <article class="article">
-          <img src="images/snowstorm.jpg" alt="Snow Storm">
+          <img src="/images/snowstorm.jpg" alt="Snow Storm">
           <h3>Big snowstorm forecast to dump up to a foot of snow on East Idaho starting Tuesday</h3>
           <p>Article by the Idaho State Journal Staff</p>
           <p>Eastern Idahoans will likely have more snow to shovel on Tuesday and Wednesday as another big winter storm barrels through the region.</p>
@@ -96,11 +92,12 @@
        
       </main>
      <footer>
-            <p>Contact Information</p>
-    <p>&copy; 2018 | Alan Gilliam | <a href="#">Terms of Use</a> | <span>Friday, June 29, 2018</span></p>         </footer>
-  <script src="../../scripts/currentdate.js"></script>
-  <script src="../../scripts/menu.js"></script>
-  <script src="../../scripts/windchill.js"></script>
-  <script src="../../scripts/towndata.js"></script>
+		<p class="footer-bar">&copy; 2018 Your Weather | All Rights Reserved | Alan Gilliam | <span id="currentdate"></span></p>
+	</footer>
+
+	<script src="/scripts/currentdate.js"></script>
+	<script src="/scripts/hamburger.js"></script>
+	<script src="/scripts/preston-forecast.js"></script>
+	<script src="/scripts/preston-weather.js"></script>
   </body>
 </html>
