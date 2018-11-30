@@ -1,100 +1,103 @@
-/*========= Page Layout ===========*/
-
 @media only screen and (min-width: 37.5em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
 
-/*========= Header Layout ===========*/
- 
-    header {   
-        margin: 0 auto; 
-        max-width: 900px;
-    }
-    
-    h1 { 
-        text-align: center; 
-        font-size: 2em;
-        }
-        
-    h3 {
-        color: #12ab4b;
-    }
-    
-/*========= Top Navigation Layout ===========*/
-        
-    .hamburger { 
-        display: none; 
-        }
-        
-    #mainNav {
-        display: flex;
-        justify-content: center;
-        border-bottom: 1px solid #f28731;
-        border-top: 1px solid #f28731; 
-        
-    }
-    
-    .topnav {  
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around; 
-        font-size: .75em;
-        overflow: hidden; 
-        border-top: none; 
-        }
-            
-    .topnav li { 
-        display: flex;
-        border-bottom: none;
-        }
-        
-    .topnav a { 
-        display: flex; 
-        flex-direction: row;
-        text-decoration: none;
-        }
-        
-    .topnav a:hover {   
-        color: #24408e;   
-        }
-    
-/*========= Forecast Layout ===========*/
- 
-    #forecast {
-        display: inline;
-    }
-    
-    #forecast h3 {
-        margin-top: 15px;
-        padding-left: 20px;
-    }
-    
-    #tenday {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around; 
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-    }
-    
-    #tenday li {
-       text-align: center;
-        color: white;
-        font-weight: bold;
-        padding: 10px;
-        background: ##526290;
-    }
-    
-/*========= Gallery Layout ===========*/
+    nav button { display:none; }  /* hamburger button does not need to be shown */
 
-    
-    #galleryImg {
-        max-width: 600px;
-        margin: auto;
-        grid-template-columns: 1fr 1fr;
+    section.forecast { display: inline-block; }  /* show the 10-day forecast with the medium view and up */
+    .container
+    {
+        display: flex;
     }
-    
-    figure {
-        margin: 5px;
-        max-width: 250px;
+    .forecast
+    {
+    display:inline-block;
+    width: auto;
+    height: auto;
+    margin: 1em;
+    border: 2px solid #88997f;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    background-color:antiquewhite;
+
     }
-    
+    .box2
+    {
+        border: 2px solid #87992f;
+        width: auto;
+        height: auto;
+        margin: 1em;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        background-color:azure;
+    }
+    .box3
+    {
+        border: 2px solid #87992f;
+        width: auto;
+        height: auto;
+        margin: 1em;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        background-color:azure;
+    }
+    .box4
+    {
+        border: 2px solid #87992f;
+        width: auto;
+        height: auto;
+        margin: 1em;
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        background-color:azure;
+    }
+
+    article p.town-article img { width: 62.666%; float:right; }  /* responsive images */
+
 }
+/* responsive images */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    body {
+        background-color:floralwhite;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    body {
+        background-color: floralwhite;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        display: inline;
+        color: #fff;
+        float: right;
+    }
+    header .subheading {
+        font-size: 1em;
+        color: #fff;
+        display: contents;
+    }
+    .active {
+        display: block;
+    }
+    nav ul {
+        width: 100%;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+    footer {
+        text-align: center;
+        font-size: 1em;
+        background-color:darkorange;
+        color: #fff;
+    }
+    footer aside {
+        text-align: center;
+        font-size: 1.5em;
+        background-color:darkcyan;
+    }
+    footer>p {
+        text-align: center;
+        padding: 0px 20px 10px;
+    }
