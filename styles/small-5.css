@@ -245,7 +245,7 @@ section
     padding: 10px;
     height: auto;
     width: 60%;
-    border: 1px solid orange;
+    border: 1px solid #526290;
  } 
 
 .address
@@ -271,8 +271,8 @@ footer
 {
     bottom: 0;
     padding: .1em;
-	color: #fff;
-    background: 526290;
+	color: #526290;
+    background: blue;
     text-align: center;
     padding: 1px;
     font-family: arial, helvetica, sans-serif
