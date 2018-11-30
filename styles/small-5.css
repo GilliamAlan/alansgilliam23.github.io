@@ -1,511 +1,414 @@
 body {
-    font-family: 'Arvo', serif;
+    font-family: 'Lobster', sans-serif;
     font-size: 18px;
+    text-align: center;
+        
 }
 
 header {
-    background-color: #526290;
-    text-align: center;
-    padding: 1em;
-    color: white;
     display: flex;
-    flex-flow: row;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-header h2 {
-    font-size: 1.5rem;
-    color: #FF946C;
-    font-style: italic;
-}
-
-header picture {
-    margin: 1rem;
-    padding: .5rem;
-    flex: 0 1 100px;
-}
-
-header picture img {
-    width: 100%;
-    height: auto;
-}
-
-.headerText {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 40px;
+    background-color: rgba(0,87,25,.5);
+    text-align:center;
+    color:#fff;
+    background: blue;
+    font-family: arial, helvetica, sans-serif
+    
 }
 
-header h1, h2 {
-    margin: .25rem;
-}
-
-.column {
-    margin: 0 4rem 0 0;
-    padding: .5rem;
-    display: none;
-    color: white;
-    background-color: #526290;
-    font-size: 1.1em;
-    border: 2px solid white;
-}
-
-
-.column picture img {
-    width: 75px;
+header > img {
+    width: 100px;
+    padding: 1.2rem 4rem;
     height: auto;
-    margin: -20px;
-
+        
 }
 
-.column p:not(#description) {
-    font-weight: bold;
-    font-size: 1.3rem;
+#conditionsnow
+{
+    display: flex;
+    width: 90px;
+    float: right;
+    padding: 1rem 4rem;
+    
+}
+
+.headertext h1 {
+    font-size: 3rem;
+}
+
+.subheading {
+    font-size: 1.1rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    padding: 1rem;
+    
+ }
+
+.currentconditions {
+    display: none;
+    margin: 1rem 0 1rem 5rem;
+    padding: 0.2rem 2rem;
+    vertical-align: middle;
+    color: #fff;
+    background-color: rgb(90, 67, 221);
+    border: 1pt solid rgb(9, 10, 10);
+    font-size: 1.1rem;
+    box-shadow: 5px 10px 5px rgb(9, 10, 10);
+}
+
+.currentconditions img {
+    width: 100px;
+    height: auto;
+}
+
+h1 
+{
+    margin: 0;
+}
+
+h2
+{
+    color: black;
+}
+h3
+{
+    display: flex;
     color: white;
+    background: #000000;
+    padding: .1em;
+    font-size: 20px;
+    border: 5px solid black;
 }
-
-
-main h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #526290;
-    margin: 1rem;
-}
-
-nav {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    background-color: #ea8863;
-    box-shadow: 0px 3px 3px gray;
-}
-
-nav button {
-    margin: .2rem 2%;
-    background-color: transparent;
-    border: none;
-    font-family: 'Arvo', serif;
-    font-size: 1.2rem;
+h4
+{
+    display: flex;
     color: white;
+    background: #000000;
+    padding: .1em;
+    font-size: 20px;
+    border: 5px solid black;
 }
+h5 
+{ 
+    display: flex;
+    color: white;
+    background: #000000;
+    padding: .1em;
+    font-size: 20px;
+    border: 5px solid black;
+}
+
+
+.container
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav
+{
+	padding: .8em 1em;
+	background: black;
+}
+
+
+
 
 nav ul {
-    width: 100%;
-    margin: 0;
+    display: flex;
+	margin: 0;
     padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-flow: column;
+  
 }
 
-nav ul li a {
-    display: flex;
-    padding: .6rem 2%;
+a:hover {background-color: rgba(87, 81, 0, 0.884)}
+
+nav ul li {
+    flex: 1 1 auto;
+    }
+
+
+nav li
+{
+	margin-right: 0.1em;
     text-decoration: none;
-    color: white;
-    border-top: 1px solid rgba(0, 0, 0, .3)
 }
 
-.site-navigation li {
-    display: none;
-}
-
-.site-navigation li:first-child {
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    color: white;
-    font-weight: bold;
-    padding: 8px;
+nav li a 
+{   color: #fff; 
+    font-size: 20px;
     text-decoration: none;
-    font-size: 1rem;
+    
 }
 
-.hero {
-    position: relative;
-    width: 100%;
+.active
+{
+    background-color: orange;
+    color:#fff;
 }
 
-.hero img {
-    width: 100%;
-    height: auto;
-}
-
-nav a:visited {
-    color: #526290;
-}
-
-.primaryNav {
+.main-header {
     position: relative;
 }
 
-.primaryNav li {
-    background-color: #ea8863;
-    display: block;
-    width: 100%;
-    margin: 2px 0;
-    padding: 0;
-}
-
-.primaryNav li a {
-    padding: 1rem;
-    text-align: center;
-    display: block;
-}
-
-nav ul li a:hover {
-    background-color: rgba(0, 0, 0, .1);
-    color: white;
-}
-
-nav a {
-    text-decoration: none;
+.main-header img {
+    width: 60%;
+    border: 5px solid blue;
+    
 }
 
 .weathersummary {
-    padding: .5rem;
-    box-sizing: border-box;
-    max-width: 60em;
-    top: -8px;
-    left: 5px;
-    background-color: #526290;
-    box-shadow: 0 0 40px #444;
-    width: 190px;
     position: absolute;
+    top: 40px;
+    left: 400px;
+    border: 1px solid #000;
+    padding: .75rem;
+    color: #fff;
+    background: #000;
+    height: 250px;
+    width: 200px;
+    font-size: .9rem;
 }
 
-.weathersummary>h3 {
-    border-bottom: 1px solid #fff;
-    padding-bottom: .25rem;
-    margin: 0;
-    color: white;
-    font-size: 1rem;
+.article img 
+{ 
+    width: 100%;
+    height: auto;
+    padding: .1em; 
 }
 
-.weathersummary p {
-    line-height: 1.2;
-    padding: .1rem;
-    margin: 0;
-    font-size: .6rem;
+.author
+{
+    margin-top: -20px;
+    font-style: italic;
+    font-size: 0.75em;
+    width: 100%;
 }
 
-.weatherdetails {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: .2rem;
-}
+article p 
 
-.label {
-    color: #ea8863;
-    font-weight: bold;
-}
-
-.value {
-    color: white;
-    font-weight: bold;
-}
-
-.forecast {
-    display: none;
-    margin: 1rem auto;
-    background-color: #526290;
-    text-align: center;
-    padding: 1em;
-}
-
-.forecast h3 {
-    color: white;
-    font-size: 1.2em;
-    padding-top: 7px;
-    margin-top: -5px;
-}
-
-.forecast table {
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th {
-    height: 30px;
-    padding: 15px;
-    background-color: #ea8863;
-    ;
-    color: black;
-}
-
-td {
-    color: white;
-}
-
-/*-------------- ARTICLE --------------*/
-
-article {
-    background-color: #b4c1eb;
-    padding: 10px;
-    margin: 1rem auto;
-}
-
-article h3 {
+{
+    text-align: left;
     padding: 0;
 }
 
-.author {
-    margin-top: -20px;
-    font-style: italic;
-    font-size: .75em;
-    width: 100%;
-}
-
-/*---------------- FOOTER ------------*/
-
-footer {
-    clear: both;
-    background-color: #526290;
-    color: white;
-    text-align: center;
-    font-size: 15px;
-    padding: 1px;
-}
-
-/*------------ BOTTOM -------------*/
-
-.bottom {
-    background-color: #788cc7;
-    width: 100%;
-    max-height: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-}
-
-.bottomimage img {
-    display: none;
-    width: 10em;
-    padding: 15px;
-    margin-top: 1rem;
-    margin-left: 2px;
-}
-
-.contact {
+article 
+{ 
+    background-color: lightskyblue;
     padding: 10px;
-    text-align: center;
-}
-
-.contact img {
-    width: 5%;
     height: auto;
+    margin: 1rem auto;
+    width: 60%;
+    border: 1px solid blue
 }
 
-.mappicture picture img {
-    width: 10em;
-    padding: 15px;
-    margin-top: 1.5rem;
+.forecast
+{
+    margin: 1rem auto;
 }
 
-/*---------------- FORM ------------*/
+.forecast table,
+th,
+td {
+    margin: auto;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-collapse: collapse;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    padding: 10px;
+}
 
-form fieldset {
-    margin: 2rem 0;
-    border: 1px solid #526290;
+section
+{
+   background-color: lightskyblue;
+   padding: 10px;
+   margin: 0 auto;
+   width: 60%;
+   border: 1px solid blue
+}
+
+
+.mapimage
+{
+    width: 100%;
+    height: auto;
+        
+}
+
+ aside
+ { 
+    background-color: lightskyblue;
+    margin: 1rem auto;
+    padding: 10px;
+    height: auto;
+    width: 60%;
+    border: 1px solid blue;
+ } 
+
+.address
+{
+    padding: 0 1em 1em 1em;
+}
+
+.googlemaps
+{
+    border: 5px solid white;
+    background-color: white;
+}
+.contact 
+{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center; 
+    font-size: 1.1em;
+}
+
+footer
+{
+    bottom: 0;
+    padding: .1em;
+	color: #fff;
+    background: blue;
+    text-align: center;
+    padding: 1px;
+    font-family: arial, helvetica, sans-serif
+      
+}
+
+
+
+ @media only screen and (max-width: 37.5em) {
+    .responsive { position: relative; }
+    .responsive li { background-color: #eee;    display: block; width: 100%; margin: 2px 0; border: 1px solid #ddd; }
+    .responsive li a {  padding: 1rem; text-align: center;  display: block; text-decoration:none; }
+    .responsive li a:hover { background-color: #ddd; }
+}
+
+.gallerypics
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    
+}
+
+
+.stormForm,
+.thanks {
+    width: 400px;
+    padding:40px;
+    margin: 2rem auto;
+    background: #FFF;
     border-radius: 10px;
-    padding: .5rem 2%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    
+}
+.stormForm .subsection{
+    padding: 30px;
+    background: #F8F8F8;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    
+}
+.stormForm h1,
+.thanks h1{
+    background: rgb(9, 50, 233);
+    padding: 10px 20px 15px 20px;
+    margin: -30px -30px 30px -30px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid rgb(9, 50, 233);
+    
+    
 }
 
-form legend {
-    color: #526290;
-    margin: 0 1rem;
-    padding: 0 .5rem;
-    font-size: 1.5rem;
-}
-
-.danger {
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-top: 2rem;
-}
-
-form label.top, form div {
+.stormForm label{
     display: block;
-    padding-top: 1rem;
-    padding-bottom: .1rem;
-    color: #ea8863;
-    font-size: 1rem;
-    font-weight: bold;
+    color: #888;
+    margin-bottom: 15px;
 }
-
-form label.top input, form label.top select, form textarea {
-    -webkit-appearance: none;
+.stormForm input[type="text"],
+.stormForm input[type="date"],
+.stormForm input[type="email"],
+.stormForm input[type="number"],
+.stormForm input[type="tel"],
+.stormForm select {
     display: block;
-    font-size: 1rem;
-    border: solid 1px #999;
-    border-radius: 4px;
-    padding: .75rem;
-    color: #555;
+    box-sizing: border-box;
     width: 100%;
-    max-width: 20rem;
-    background-color: rgba(82, 98, 144, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
 }
 
-form label.sbs {
+.stormForm input[type="radio"]{
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+
+.stormForm textarea {
     display: block;
-    padding: .75rem 0;
-    color: #ea8863;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-form input.submitBtn {
-    border: none;
-    background-color: #ea8863;
-    color: white;
-    border-radius: 4px;
-    padding: .75rem;
-    margin: 0 0 2rem 2%;
-    width: 75%;
-    max-width: 15rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-#rating {
-    padding: .5rem;
-    margin: 2%;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    background-color: #526290;
-    border-radius: 25%;
-}
-
-.stormslider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 80%;
-    height: .5rem;
-    background: #ea8863;
-    outline: none;
-    opacity: 0.7;
-}
-
-.stormslider:hover {
-    opacity: 1;
-}
-
-.stormslider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #526290;
-    cursor: pointer;
-    border-radius: 100%;
-}
-
-.stormslider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #526290;
-    cursor: pointer;
-}
-
-form label.top input:required {
-    background-color: rgba(178, 35, 35, 0.1);
-}
-
-form label.top input:required:valid {
-    background-color: rgba(82, 98, 144, 0.1);
-}
-
-/*----------------THANK YOU-----------------*/
-
-#thanks {
-    margin: 2%;
-    padding: .5rem 0;
-    font-size: 1.5rem;
-    color: #526290;
-}
-
-/*--------------- GALLERY -----------*/
-
-.gallerycontainer {
-    display: grid;
-}
-
-.gallerycontainer figcaption {
-    max-width: 100%;
-    font-style: italic;
-    font-size: .75rem;
-    padding-top: .50rem;
-}
-
-.gallerycontainer figure img {
-    max-width: 100%;
-}
-
-/*------------------ TOWN INFO ---------------*/
-
-.townContainer {
-    display: grid;
-    justify-items: center;
-    max-width: 60%;
-    margin-left: 4%;
-}
-
-.townContainer img {
-    max-width: 90%;
-    margin-left: 3%;
-    padding: 2%;
-}
-
-.townContainer h4 {
-    text-align: center;
-    color: #ea8863;
-    font-weight: bold;
-    font-size: 1.75rem;
-}
-
-.townContainer .motto {
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    width: 90%;
-    margin-left: 4%;
-    font-size: 1.3rem;
-    padding-bottom: 1.5rem;
-}
-
-.townContainer .stats {
-    color: white;
-    font-weight: normal;
-}
-
-.townContainer p {
-    color: #ea8863;
-    font-weight: bold;
-    padding: 1%;
-    margin: 5%;
-}
-
-.townContainer section {
-    border: 7px solid #ea8863;
-    background-color: #526290;
-    padding: .2rem;
-    margin-bottom: .75rem;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
     width: 100%;
+    height: 12rem;
+    
+}
+.ymn {
+    margin-right:1.5rem;
+    margin-left: .5rem;
 }
 
-.sodaSpringsInfo .motto {
-    padding-bottom: 0;
+.stormForm .section{
+    font: normal 20px 'Bitter', serif;
+    color: rgb(9, 50, 233);
+    margin-bottom: 5px;
+}
+.stormForm .section span {
+    background: rgb(9, 50, 233);
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    font-size: 14px;
+    margin-left: -45px;
+    color: #fff;
+    margin-top: -3px;
+}
+.stormForm input[type="button"],
+.stormForm input[type="submit"]{
+    background: rgb(9, 50, 233);
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid rgb(9, 50, 233);
+    font-size: 15px;
+}
+.stormForm input[type="button"]:hover,
+.stormForm input[type="submit"]:hover{
+    background: rgb(9, 50, 233);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+input#severity{
+    position:relative;
+    top:.25rem;
+
 }
