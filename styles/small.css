@@ -13,7 +13,7 @@ header {
     background-color: rgba(0,87,25,.5);
     text-align:center;
     color:#fff;
-    background: blue;
+    background: #526290;
     font-family: arial, helvetica, sans-serif
     
 }
@@ -85,7 +85,7 @@ h4
 {
     display: flex;
     color: white;
-    background: #000000;
+    background: ##526290;
     padding: .1em;
     font-size: 20px;
     border: 5px solid black;
