@@ -1,111 +1,161 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Fill Me In">
 
-        <!-- This start file was build by Paul Cheney  -->
+        
         <title>Term Website Project by Alan Gilliam</title>
 
         <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <!-- STYLE SHEETS -->
-        <link href="../../Styles/normalize-12.css" rel="stylesheet">
-        <!-- phone-default -->
-        <link href="../../Styles/main-12.css" rel="stylesheet">
-        <!-- enhance-tablet -->
-        <link href="../../Styles/medium-12.css" rel="stylesheet">
-        <!-- enhance-desktop -->
-        <link href="../../Styles/large-12.css" rel="stylesheet">
+<link rel="stylesheet" href="../../Styles/normalize-12.css">
+<link rel="stylesheet" href="../../Styles/main-12.css">
+<link rel="stylesheet" href="../../Styles/medium-12.css">
+<link rel="stylesheet" href="../../Styles/large-12.css">
 
         <!-- Google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
-
-        <script src="../../scripts/hamburger.js"></script>
-        <script src="../../scripts/jquey-dropdownMenu.js"></script>
-        <script src="../../scripts/currentdate.js"></script>
-
     </head>
     <body>
 
         <!-- HEADER HERE -->
-        <header>
-            <div>
-                <h1>The Mountain Spoke</h1>
-                <h2>Bike!</h2>
-            </div>
-            <button class="hamburger" onclick="toggleHam()">&#9776;</button>
-        </header>
+           <header>
+        <div class="temple-icon">
+            <img src="../../images/salt-lake-temple-silhouette.svg" alt="temple image">
+        </div>
+        <div class="site-title">
+            <h1>Temple Inn & Suites</h1>
+            
+        </div>
+        <div class="temple-icon2">
+            <img src="/images/salt-lake-temple-silhouette.svg" alt="temple image">
+        </div>
+    </header>
 
         <!-- NAVIGATION HERE -->
-        <nav class="clearfix">
+       <nav class="clearfix">
             <ul class="navigation" id="mainmenu">
-                <li><a href="../../index.html">HOME</a></li>
-                <li><a href="../../assignments/lesson-12/mountainspoke.html">MOUNTAIN SPOKES</a></li>
-                <li><a href="../../assignments/lesson-12/adventuretour.html">ADVENTURE TOURS</a></li>
-                <li><a href="../../assignments/lesson-12/events.html">EVENTS</a></li>
-                <li><a href="../../assignments/lesson-12/shop.html">SHOP BIKES</a></li>
-                <li><a href="../../assignments/lesson-12/repairshop.html">REPAIR SHOP</a></li>
-                <li><a href="../../assignments/lesson-12/contact.html">CONTACT</a></li>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../assignments/lesson-12/temples.html">Temples</a></li>
+        <li><a href="../../assignments/lesson-12/reservations.html">Reservations</a></li>
+        <li><a href="../../assignments/lesson-12/services.html">Services</a></li>
+        <li><a href="../../assignments/lesson-12/contact.html">Contact Us</a></li>
             </ul>
         </nav>
 
-        <!-- CONTENT HERE -->
+    <main>
+        <h2>Room Reservation</h2>
+        <form action="thanks.html">
+            <fieldset class="box">
+                <legend><h3>Location</h3></legend>
+                <div>
+                    <label>Temple Location <span class="star">*</span> </label>
+                    <input list="location" name="location" required>
+                    <datalist id="location">
+                        <option value="Tucson"></option>
+                        <option value="Phoenix"></option>
+                        <option value="Gilbert"></option>
+                        <option value="Gila Valley"></option>
+                    </datalist>
+                </div>
+                <label>From <span class="star">*</span> <input type="date" name="completeDate" required></label>
+                <label>To <span class="star">*</span> <input type="date" name="completeDate" required></label>
+                <label>Number of Rooms <span class="star">*</span> <input type="number" name="amountRooms" required></label>
+                <label>Number of Adults <span class="star">*</span> <input type="number" name="adultsNumber" required></label>
+                <label>Number of Youth <span class="star">*</span> <input type="number" name="youthNumber" required></label>
+                <fieldset class="bullet">
+                    <legend><h4>Type of Room</h4></legend>
+                    <label><input type="radio" name="roomType" value="family"><span class="dot"></span> Family</label>
+                    <label><input type="radio" name="roomType" value="youngWomen"> Young Women</label>
+                    <label><input type="radio" name="roomType" value="youngMen"> Young Men</label>
+                </fieldset>
+            </fieldset>
+            <fieldset class="box">
+                <legend><h3>Name and Contact Information</h3></legend>
+                <label>First Name <span class="star">*</span> <input type="text" name="fname" pattern="[A-z]{3,}" title="Only letters please" required></label>
+                <label>Last Name <span class="star">*</span> <input type="text" name="lname" pattern="[A-z]{5,}" required></label>
+                <label>Email <span class="star">*</span> <input type="email" name="email" placeholder="example@email.com" required></label>
+                <label>Phone Number <span class="star">*</span> <input type="tel" name="tel" placeholder="1234567890" pattern="[0-9]{7,}" required></label>
 
-        <main>
-
-        <div class="bikes">
-            <h2>REPAIR SHOP</h2>
-            <p>YOUR MOUNTAIN MIKE NEEDS SOME WORK BEFORE HEADING OUR ON THE TRAIL? BRING IT BY AND WE'LL GET HER READY!</p>
-        </div>
-
-        <div class="repair">
-            <div><img src="/images/SERVICE980350-min.jpg" alt="image01">
-                <h1>BRING YOUR BIKE TO US!</h1>
-                <ul>
-                    <li>We do all repairs on a first come first serve basis. However, most repairs are completed within 2-3 business days.</li>
-                    <li>When you bring in your bike for service, we always start with a free, no-obligation estimate of the work that will be needed. One of our bike technicians will discuss the problem with you and will carefully explain what work should be done, always respecting your choices and your budget.</li>
-                    <li>Appointments are not necessary but you can make an appointment. Just give us a call and we'll set up an appointment for you</li>
-                    <li>We do it all! From Bikes that have not seen the light of day in 30 years to the latest pro level rides.
-                        Please do not hesitate to wheel in anything you've got, we'll be able to help!  (Motorized bikes excluded, sorry)</li>
-                    <li>Our hours are:
-                        Monday - Saturday | 10AM-7PM
-                        & Sundays | 10AM-5PM</li>
-                </ul>
+                <div> <label>State</label>
+                    <input list="state" name="state">
+                    <datalist id="state">
+                        <option value="Alabama"></option>
+                        <option value="Alaska"></option>
+                        <option value="Arizona"></option>
+                        <option value="Arkansas"></option>
+                        <option value="California"></option>
+                        <option value="Colorado"></option>
+                        <option value="Connecticut"></option>
+                        <option value="Delaware"></option>
+                        <option value="Florida"></option>
+                        <option value="Georgia"></option>
+                        <option value="Hawaii"></option>
+                        <option value="Idaho"></option>
+                        <option value="Illinois"></option>
+                        <option value="Indiana"></option>
+                        <option value="Iowa"></option>
+                        <option value="Kansas"></option>
+                        <option value="Kentucky"></option>
+                        <option value="Louisiana"></option>
+                        <option value="Maine"></option>
+                        <option value="Maryland"></option>
+                        <option value="Massachusetts"></option>
+                        <option value="Michigan"></option>
+                        <option value="Minnesoda"></option>
+                        <option value="Mississippi"></option>
+                        <option value="Missouri"></option>
+                        <option value="Montana"></option>
+                        <option value="Nebraska"></option>
+                        <option value="Nevada"></option>
+                        <option value="New Hampshire"></option>
+                        <option value="New Jersey"></option>
+                        <option value="New Mexico"></option>
+                        <option value="New York"></option>
+                        <option value="North Carolina"></option>
+                        <option value="North Dakota"></option>
+                        <option value="Ohio"></option>
+                        <option value="Oklahoma"></option>
+                        <option value="Oregon"></option>
+                        <option value="Pennsylvania"></option>
+                        <option value="Rhode Island"></option>
+                        <option value="South Carolina"></option>
+                        <option value="South Dakota"></option>
+                        <option value="Tennessee"></option>
+                        <option value="Texas"></option>
+                        <option value="Utah"></option>
+                        <option value="Vermont"></option>
+                        <option value="Virginia"></option>
+                        <option value="Washington"></option>
+                        <option value="West Vriginia"></option>
+                        <option value="Wisconsin"></option>
+                        <option value="Wyoming"></option>
+                    </datalist>
+                </div>
+            </fieldset>
+            <fieldset class="textbox">
+                <legend><h3>Additional Comments / Accomodations</h3></legend>
+                <label>Comments: <textarea name="comments"></textarea></label>
+            </fieldset>
+            <div class="book">
+                <input type="submit" value="Make my Reservation!">
             </div>
+        </form>
+    </main>
+   <footer>
+    <p>© Bethesda Headquarters 4800 Montgomery Ln #300, Bethesda, MD 20814 301-518-4318</p>
+       <div class="icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="../../images/icon-facebook.png" alt="Facebook"></a>
+            <a href="https://www.pinterest.com" target="_blank"><img src="../../images/icon-pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="../../images/icon-instagram.png" alt="instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="../../images/icon-twitter.png" alt="twitter"></a>
         </div>
-
-</main>
-
-<!-- FOOTER HERE -->
-<footer>
-    <p>&copy; 2018 &bull; <a href="theMountainSpoke.html">The Mountain Spoke</a> &bull; Alan Gilliam &bull; 123-555-6789</p>
     
 </footer>
-
+    <script src="/scripts/menu.js"></script>
 </body>
-
-<script>
-    //remember to add an ID of "mainmenu" to the nav ul
-    var urlString = document.location.href;
-    var urlArray = urlString.split('/');
-    var pageHREF=urlArray[urlArray.length-1];
-
-    if (pageHREF !=="") {
-        var menu = document.querySelectorAll('ul#mainmenu li a');
-        var i;
-
-        //loop through all the menu items in the navigation
-        for(i=0; i<menu.length; i++) {
-            var currentURL=(menu[i].getAttribute("href"));
-            menu[i].parentNode.className=""; //turn off hilighting by default
-
-            if (currentURL===pageHREF) {
-                menu[i].parentNode.className="active";	//turn on if a match
-            } // end if
-        } // end of the search for a match
-    } // end of if !==
-</script>
 
 </html>
