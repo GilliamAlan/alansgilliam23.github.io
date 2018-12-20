@@ -4,14 +4,26 @@
 
 /*----------- BODY --------------------*/
     body {
-        background-position: center 140px;
+        background-position: center 10px;
     }
 
 /*----------- HEADER ------------------*/
-
+    
+    div.temple-icon {
+        display: contents;
+    }
+    div.temple-icon img {
+        width: 60px;
+    }
+    body header {
+        grid-template-columns: 1fr 3.5fr 1fr;
+        align-items: center;
+        justify-items: center;
+        padding: 1em;
+    }
 /*----------- NAVIGATION --------------*/
     nav ul li {
-        width: auto;
+        width: 180px;
     }
 
     nav ul li a {
@@ -43,7 +55,7 @@
 
     footer {
         position: relative;
-        top: 4em;
+        top: 100em;
     }
 
 /*----------- FOOTER --------------------*/

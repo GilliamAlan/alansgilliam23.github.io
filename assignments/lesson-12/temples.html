@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Fill Me In">
+
+        
+        <title>Term Website Project by Alan Gilliam</title>
+
+        <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- STYLE SHEETS -->
+        <link href="../../styles/normalize-12.css" rel="stylesheet">
+        <!-- phone-default -->
+        <link href="../../styles/main-12.css" rel="stylesheet">
+        <!-- enhance-tablet -->
+        <link href="../../styles/medium-12.css" rel="stylesheet">
+        <!-- enhance-desktop -->
+        <link href="../../styles/large-12.css" rel="stylesheet">
+
+        <!-- Google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Passion+One" rel="stylesheet">
+
+        <script src="../../scripts/hamburger.js"></script>
+        <script src="../../scripts/jquey-dropdownMenu.js"></script>
+        <script src="../../scripts/currentdate.js"></script>
+
+    </head>
+    <body>
+
+        <!-- HEADER HERE -->
+           <header>
+        <div class="temple-icon">
+            <img src="../../images/salt-lake-temple-silhouette.svg" alt="temple image">
+        </div>
+        <div class="site-title">
+            <h1>Temple Inn & Suites</h1>
+            
+        </div>
+        <div class="temple-icon2">
+            <img src="/images/salt-lake-temple-silhouette.svg" alt="temple image">
+        </div>
+    </header>
+
+        <!-- NAVIGATION HERE -->
+       <nav class="clearfix">
+            <ul class="navigation" id="mainmenu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../assignments/lesson-12/mountainspoke.html">Temples</a></li>
+        <li><a href="../../assignments/lesson12/adventuretour.html">Reservations</a></li>
+        <li><a href="../../assignments/lesson-12/events.html">Services</a></li>
+        <li><a href="../../assignments/lesson-12/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    <main>
+        <div class="temple-box">
+            <div class="temple-info1">
+                <div class="temple-image">
+            
+                    
+                <div class="temple-text">
+                    <h2>Tucson Arizona Temple Information</h2>
+                    <div class="weather-tucson">
+                        <!--Weather data here-->
+                        <picture>
+                        <source media="(max-width: 400px)" srcset="images/tucson-arizona-temple2-400-93.jpg">
+                        <img src="../../images/tucson-arizona-temple2-600-70.jpg" alt="Tucson Arizona Temple">
+                    </picture>
+                    </div>
+                    <h4>Address</h4>
+                    <ul>
+                        <li>7281 North Skyline Dr, Tucson, AZ 85718</li>
+                    </ul>
+                    <h4>Phone Number</h4>
+                    <ul>
+                        <li>(1) 520-395-3900</li>
+                    </ul>
+                    <h4>Email</h4>
+                    <ul>
+                        <li>Click
+                            <a href="https://www.lds.org/temples/details/tucson-arizona-temple?lang=eng">HERE</a>
+                            to send an email.
+                        </li>
+                    </ul>
+                    <h3><button onclick="showTucson()">Closures 2019</button></h3>
+                    <div id="show-tucson" class="temple-tucson hide-tucson">
+                        <!--JSON data drop down here-->
+                    </div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li>No clothing rental available</li>
+                        <li>No cafeteria available</li>
+                        <li>Distribution center nearby</li>
+                    </ul>
+                    <h3>History</h3>
+                    <ul>
+                        <li>October 6, 2012: Announced</li>
+                        <li>October 17, 2015: Groundbreaking</li>
+                        <li>August 13, 2017: Dedicated</li>
+                    </ul>
+                    <h3>Schedule for Ordinances</h3>
+                    <h4>Baptism</h4>
+                    <ul>
+                        <li>Family
+                            <ul>
+                                <li>Friday: 6:00 PM - 8:30 PM</li>
+                                <li>Saturday: 10:00 AM - 12:00 PM</li>
+                                <li>Saturday: 4:00 PM - 7:00 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Church Group
+                            <ul>
+                                <li>Tuesday: 6:00 PM - 8:30 PM</li>
+                                <li>Wednesday: 6:00 AM - 8:30 PM</li>
+                                <li>Saturday: 6:00 AM - 10:00 AM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Initiatory</h4>
+                    <ul>
+                        <li>Please call the temple for initiatory information</li>
+                    </ul>
+                    <h4>Endowment</h4>
+                    <ul>
+                        <li>6:30 AM, 7:30 AM, 8:30 AM, 10:00 AM, 11:00 AM, 12:30 PM, 4:00 PM,
+                            5:00 PM, 6:30 PM, 7:30 PM</li>
+                    </ul>
+                    </li>
+                    <h4>Sealing</h4>
+                    <ul>
+                        <li>Please call the temple for sealing information</li>
+                    </ul>
+                    <h4>Information about Temples</h4>
+                    <ul>
+                        <li>If you have questions about temples and what they are for, we have included
+                            a link <a href="https://churchofjesuschristtemples.org/about/">HERE</a>
+                            to help you get answers.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="temple-info2">
+                <div class="temple-image">
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="images/phoenix-arizona-temple2-400-95.jpg">
+                        <img src="images/phoenix-arizona-temple2-600-80.jpg" alt="Phoenix Arizona Temple">
+                    </picture>
+                    <div class="click-left2">
+                        <button id="moveLeft">&#10094;</button>
+                    </div>
+                    <div class="click-right2">
+                        <button id="moveRight">&#10095;</button>
+                    </div>
+                </div>
+                <div class="temple-text">
+                    <h2>Phoenix Arizona Temple Information</h2>
+                    <div class="weather-phoenix">
+                        <!--Weather data here-->
+                    </div>
+                    <h4>Address</h4>
+                    <ul>
+                        <li>5220 W Pinnacle Peak Rd, Phoenix, AZ 85310</li>
+                    </ul>
+                    <h4>Phone Number</h4>
+                    <ul>
+                        <li>(1) 623-474-9500</li>
+                    </ul>
+                    <h4>Email</h4>
+                    <ul>
+                        <li>Click
+                            <a href="https://www.lds.org/temples/details/phoenix-arizona-temple?lang=eng">HERE</a>
+                            to send an email.
+                        </li>
+                    </ul>
+                    <h3><button onclick="showPhoenix()">Closures 2019</button></h3>
+                    <div id="show-phoenix" class="temple-phoenix hide-phoenix">
+                        <!--JSON data drop down here-->
+                    </div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li>No clothing rental available</li>
+                        <li>No cafeteria available</li>
+                        <li>No distribution center nearby</li>
+                    </ul>
+                    <h3>History</h3>
+                    <ul>
+                        <li>May 9, 2008: Announced</li>
+                        <li>June 4, 2011: Groundbreaking</li>
+                        <li>November 16, 2014: Dedicated</li>
+                    </ul>
+                    <h3>Schedule for Ordinances</h3>
+                    <h4>Baptism</h4>
+                    <ul>
+                        <li>Family
+                            <ul>
+                                <li>Saturday: 4:00 PM - 7:00 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Initiatory</h4>
+                    <ul>
+                        <li>Please call the temple for initiatory information</li>
+                    </ul>
+                    <h4>Endowment</h4>
+                    <ul>
+                        <li>7:30 AM, 9:00 AM, 10:30 AM, 4:30 PM, 6:00 PM, 7:30 PM</li>
+                    </ul>
+                    </li>
+                    <h4>Sealing</h4>
+                    <ul>
+                        <li>Please call the temple for sealing information</li>
+                    </ul>
+                    <h4>Information about Temples</h4>
+                    <ul>
+                        <li>If you have questions about temples and what they are for, we have included
+                            a link <a href="https://churchofjesuschristtemples.org/about/">HERE</a>
+                            to help you get answers.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="temple-info3">
+                <div class="temple-image">
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="images/gilbert-arizona-temple2-400-95.jpg">
+                        <img src="images/gilbert-arizona-temple2-600-85.jpg" alt="Gilbert Arizona Temple">
+                    </picture>
+                    <div class="click-left3">
+                        <button id="moveLeft">&#10094;</button>
+                    </div>
+                    <div class="click-right3">
+                        <button id="moveRight">&#10095;</button>
+                    </div>
+                </div>
+                <div class="temple-text">
+                    <h2>Gilbert Arizona Temple Information</h2>
+                    <div class="weather-gilbert">
+                        <!--Weather data here-->
+                    </div>
+                    <h4>Address</h4>
+                    <ul>
+                        <li>3301 S Greenfield Rd, Gilbert, AZ 85297</li>
+                    </ul>
+                    <h4>Phone Number</h4>
+                    <ul>
+                        <li>(1) 480-822-5000</li>
+                    </ul>
+                    <h4>Email</h4>
+                    <ul>
+                        <li>Click
+                            <a href="https://www.lds.org/temples/details/gilbert-arizona-temple?lang=eng">HERE</a>
+                            to send an email.
+                        </li>
+                    </ul>
+                    <h3><button onclick="showGilbert()">Closures 2019</button></h3>
+                    <div id="show-gilbert" class="temple-gilbert hide-gilbert">
+                        <!--JSON data drop down here-->
+                    </div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Clothing rental available</li>
+                        <li>No cafeteria available</li>
+                        <li>Distribution center nearby</li>
+                    </ul>
+                    <h3>History</h3>
+                    <ul>
+                        <li>April 10, 2008: Announced</li>
+                        <li>November 13, 2010: Groundbreaking</li>
+                        <li>March 2, 2014: Dedicated</li>
+                    </ul>
+                    <h3>Schedule for Ordinances</h3>
+                    <h4>Baptism</h4>
+                    <ul>
+                        <li>Family
+                            <ul>
+                                <li>Friday: 4:00 PM - 8:30 PM</li>
+                                <li>Saturday: 4:00 AM - 8:30 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Church Group
+                            <ul>
+                                <li>Tuesday: 4:00 PM - 8:30 PM</li>
+                                <li>Wednesday: 4:00 AM - 8:30 PM</li>
+                                <li>Saturday: 5:30 AM - 11:00 AM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Initiatory</h4>
+                    <ul>
+                        <li>Please call the temple for initiatory information</li>
+                    </ul>
+                    <h4>Endowment</h4>
+                    <ul>
+                        <li>5:30 AM, 6:15 AM, 7:00 AM, 7:45 AM, 8:30 AM, 9:15 AM, 10:00 AM, 10:45 AM,
+                            11:30 AM, 12:15 PM, 1:00 PM, 1:45 PM, 2:30 PM, 3:15 PM, 4:00 PM, 4:45 PM,
+                            5:30 PM, 6:15 PM, 7:00 PM, 7:30 PM</li>
+                    </ul>
+                    </li>
+                    <h4>Sealing</h4>
+                    <ul>
+                        <li>Please call the temple for sealing information</li>
+                    </ul>
+                    <h4>Information about Temples</h4>
+                    <ul>
+                        <li>If you have questions about temples and what they are for, we have included
+                            a link <a href="https://churchofjesuschristtemples.org/about/">HERE</a>
+                            to help you get answers.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="temple-info4">
+                <div class="temple-image">
+                    <picture>
+                        <source media="(max-width: 400px)" srcset="images/gila-valley-temple2-400-90.jpg">
+                        <img src="images/gila-valley-temple2-600-80.jpg" alt="The Gila Valley Arizona Temple">
+                    </picture>
+                    <div class="click-left4">
+                        <button id="moveLeft">&#10094;</button>
+                    </div>
+                    <div class="click-right4">
+                        <button id="moveRight">&#10095;</button>
+                    </div>
+                </div>
+                <div class="temple-text">
+                    <h2>The Gila Valley Arizona Temple Information</h2>
+                    <div class="weather-gila">
+                        <!--Weather data here-->
+                    </div>
+                    <h4>Address</h4>
+                    <ul>
+                        <li>5291 W Highway 70, Central, AZ 85531</li>
+                    </ul>
+                    <h4>Phone Number</h4>
+                    <ul>
+                        <li>(1) 928-428-7243</li>
+                    </ul>
+                    <h4>Email</h4>
+                    <ul>
+                        <li>Click
+                            <a href="https://www.lds.org/temples/details/the-gila-valley-arizona-temple?lang=eng">HERE</a>
+                            to send an email.
+                        </li>
+                    </ul>
+                    <h3><button onclick="showGila()">Closures 2019</button></h3>
+                    <div id="show-gila" class="temple-gila hide-gila">
+                        <!--JSON data drop down here-->
+                    </div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li>No clothing rental available</li>
+                        <li>No cafeteria available</li>
+                        <li>Distribution center nearby</li>
+                    </ul>
+                    <h3>History</h3>
+                    <ul>
+                        <li>April 26, 2008: Announced</li>
+                        <li>February 14, 2009: Groundbreaking</li>
+                        <li>May 23, 2010: Dedicated</li>
+                    </ul>
+                    <h3>Schedule for Ordinances</h3>
+                    <h4>Baptism</h4>
+                    <ul>
+                        <li>Family
+                            <ul>
+                                <li>Friday: 4:00 PM - 8:00 PM</li>
+                                <li>Saturday: 4:00 PM - 8:00 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>Church Group
+                            <ul>
+                                <li>Tuesday: 8:00 AM - 8:00 PM</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4>Initiatory</h4>
+                    <ul>
+                        <li>Please call the temple for initiatory information</li>
+                    </ul>
+                    <h4>Endowment</h4>
+                    <ul>
+                        <li>8:00 AM, 10:00 AM, 12:00 PM, 2:00 PM, 4:00 PM, 5:30 PM, 7:00 PM</li>
+                    </ul>
+                    
+                    <h4>Sealing</h4>
+                    <ul>
+                        <li>Please call the temple for sealing information</li>
+                    </ul>
+                    <h4>Information about Temples</h4>
+                    <ul>
+                        <li>If you have questions about temples and what they are for, we have included
+                            a link <a href="https://churchofjesuschristtemples.org/about/">HERE</a>
+                            to help you get answers.
+                        </li>
+                    </ul>
+                </div>
+    </main>
+    <footer>
+        <div class="icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a>
+            <a href="https://www.pinterest.com" target="_blank"><img src="images/icon-pinterest.png" alt="Pinterest"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="images/icon-instagram.png" alt="instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="images/icon-twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer">
+            <p>Link to resources used <a href="resources.html">HERE</a></p>
+            <p>&copy; Bethesda Headquarters</p>
+            <p>4800 Montgomery Ln #300,</p>
+            <p>Bethesda, MD 20814</p>
+            <p>301-518-4318</p>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="/scripts/menu.js"></script>
+    <script src="/scripts/weather.js"></script>
+    <script src="/scripts/templedata.js"></script>
+</body>
+
+</html>
