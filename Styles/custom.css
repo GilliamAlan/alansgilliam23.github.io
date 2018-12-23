@@ -8,8 +8,8 @@ div.icons a img {
 footer {
     text-align:center;
 }
-@media only screen and (max-width:768px;) {
-.btn-secondary {
+@media screen and (max-width:768px) {
+.btn {
     margin-bottom:32px;
 }}
 .nav-link {
