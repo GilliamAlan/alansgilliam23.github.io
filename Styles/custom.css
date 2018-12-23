@@ -5,6 +5,18 @@
 div.icons a img {
     width: 3em;
 }
+@media (min-width: 576px) {
+.jumbotron {
+    text-align: center;
+ }}
+.jumbotron ul {
+    list-style: none;
+}
+.jumbotron ul li {
+    padding: 8px 0px;
+    border-top: 2px solid #fff;
+    margin-top: 8px;
+}
 footer {
     margin-top:40px;
     padding-top: 32px;
