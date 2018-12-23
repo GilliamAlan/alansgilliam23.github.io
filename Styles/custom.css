@@ -2,3 +2,12 @@
 .btn-secondary {
     margin-bottom:32px;
 }}
+.nav-link {
+    display:inline-block;
+}
+li.nav-item {
+    display:inline-block;
+}
+ul.navbar-nav.mr-auto {
+    display:inline-block;
+}
