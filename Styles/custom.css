@@ -10,6 +10,7 @@ img {
 }
 [type="submit"] {
     background:#007bff;
+    cursor:pointer;
     border:#007bff;
     padding: 6px;
     color: #fff;
