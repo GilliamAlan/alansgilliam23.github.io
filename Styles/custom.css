@@ -56,7 +56,7 @@ ul.navbar-nav.mr-auto {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:768px) {
   .topnav a {display: none;}
   .topnav a.icon {
     float: right;
@@ -64,7 +64,7 @@ ul.navbar-nav.mr-auto {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width:768px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
