@@ -11,10 +11,9 @@ footer {
     margin-bottom: 32px;
     border-top: 1px solid #000;
 }
-@media screen and (max-width:768px) {
 .btn {
     margin-bottom:32px;
-}}
+}
 .nav-link {
     display:inline-block;
 }
