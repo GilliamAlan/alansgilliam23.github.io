@@ -8,6 +8,11 @@ img {
 .col-md-4 h2 {
     padding-top:16px;
 }
+
+input, button, select, optgroup, textarea {
+    display: block;
+    width: 100%;
+}
 div.icons a img {
     width: 3em;
 }
