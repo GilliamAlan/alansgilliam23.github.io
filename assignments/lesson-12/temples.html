@@ -17,27 +17,8 @@
     <!-- Custom styles for this template -->
     <link href="../../Styles/temple-inn-suites.css" rel="stylesheet">
     
-    <script type="text/javascript" src="httpS://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     
     
-    <script>
-
-    $(function() {
-
-
-   var people = [];
-
-   $.getJSON('people.json', function(data) {
-       $.each(data.person, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-           "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-});
-</script>
     
   </head>
 
@@ -136,10 +117,12 @@
           
           
           <br><br>
-          <img src="/images/1.jpg" alt="1">
-          <h2>Salt Lake City Temple</h2>
-          <p>The Salt Lake Temple is a temple of The Church of Jesus Christ of Latter-day Saints (LDS Church) located on Temple Square in Salt Lake City, Utah, United States.</p>
-          <br>
+            <div class="output">Nothing Yet</div>
+          <script  src="temples.js"></script>
+            
+            
+            
+            <br><br>
         </div>
         <div class="col-md-4">
           <h3>Book your room today!</h3><br><br><h5>Take advantage of our reception area too!</h5>
