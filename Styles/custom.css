@@ -91,7 +91,7 @@ ul.navbar-nav.mr-auto {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color:#ddd;
   color: black;
 }
 
@@ -110,6 +110,9 @@ ul.navbar-nav.mr-auto {
     float: right;
     display: block;
   }
+    #width1.booked-wzs-160-110, #width2.booked-wzs-160-110, #width3.booked-wzs-160-110, #width4.booked-wzs-160-110 {
+    float: right;
+    }
 }
 
 @media screen and (max-width:768px) {
