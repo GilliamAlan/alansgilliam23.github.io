@@ -15,8 +15,17 @@ img {
     padding: 6px;
     color: #fff;
 }
-p#showData {
-    margin-top:1em;
+p#showData1 {
+    margin-top: 1em;
+}
+p#showData2 {
+    margin-top: 1em;
+}
+p#showData3 {
+    margin-top: 1em;
+}
+p#showData4 {
+    margin-top: 1em;
 }
 [type="submit"]:hover {
     background:#000;
