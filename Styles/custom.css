@@ -112,12 +112,11 @@ ul.navbar-nav.mr-auto {
   .topnav a.icon {
     float: right;
     display: block;
-  }
-    #width1.booked-wzs-160-110, #width2.booked-wzs-160-110, #width3.booked-wzs-160-110, #width4.booked-wzs-160-110 {
-    float: right;
-    }
-}
-
+}}
+@media screen and (min-width:768px) {
+#width1.booked-wzs-160-110, #width2.booked-wzs-160-110, #width3.booked-wzs-160-110, #width4.booked-wzs-160-110 {
+    float:right;
+}}
 @media screen and (max-width:768px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
