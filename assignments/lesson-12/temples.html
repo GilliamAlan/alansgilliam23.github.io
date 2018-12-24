@@ -49,11 +49,11 @@
           <br>
           
           
+          <input type="button" onclick="CreateTableFromJSON()" value="Create Table From JSON" />
+    <p id="showData"></p>
+         
           
-          <textarea name="" id="myTextarea" cols="30" rows="10"></textarea>
-          <script>
-            var myData = {"address":{"House_Number":505,"Street_Direction":"","Street_Name":"Claremont","Street_Type":"Street","Apt":"15L","Burough":"Brooklyn","State":"NY","Zip":"10451","Phone":"718-777-7777"},"casehead":0,"adults":[{"Last_Name":"Foo","First_Name":"A","Sex":"M","Date_Of_Birth":"01011980"}],"children":[]};
-          </script>
+          
           <p><b>Email</b> : <a href="https://www.lds.org/temples/details/salt-lake-temple?lang=eng" target="_blank">Click HERE to send an email.</a></p>
           <br>
             <p><b>Address</b></p>
@@ -346,6 +346,81 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- JSON SCRIPT TO HTML TABLE -->
+<script>
+    function CreateTableFromJSON() {
+        var myBooks = [
+            {
+                "Book ID": "1",
+                "Book Name": "Computer Architecture",
+                "Category": "Computers",
+                "Price": "125.60"
+            },
+            {
+                "Book ID": "2",
+                "Book Name": "Asp.Net 4 Blue Book",
+                "Category": "Programming",
+                "Price": "56.00"
+            },
+            {
+                "Book ID": "3",
+                "Book Name": "Popular Science",
+                "Category": "Science",
+                "Price": "210.40"
+            }
+        ]
+
+        // EXTRACT VALUE FOR HTML HEADER. 
+        // ('Book ID', 'Book Name', 'Category' and 'Price')
+        var col = [];
+        for (var i = 0; i < myBooks.length; i++) {
+            for (var key in myBooks[i]) {
+                if (col.indexOf(key) === -1) {
+                    col.push(key);
+                }
+            }
+        }
+
+        // CREATE DYNAMIC TABLE.
+        var table = document.createElement("table");
+
+        // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+        var tr = table.insertRow(-1);                   // TABLE ROW.
+
+        for (var i = 0; i < col.length; i++) {
+            var th = document.createElement("th");      // TABLE HEADER.
+            th.innerHTML = col[i];
+            tr.appendChild(th);
+        }
+
+        // ADD JSON DATA TO THE TABLE AS ROWS.
+        for (var i = 0; i < myBooks.length; i++) {
+
+            tr = table.insertRow(-1);
+
+            for (var j = 0; j < col.length; j++) {
+                var tabCell = tr.insertCell(-1);
+                tabCell.innerHTML = myBooks[i][col[j]];
+            }
+        }
+
+        // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+        var divContainer = document.getElementById("showData");
+        divContainer.innerHTML = "";
+        divContainer.appendChild(table);
+    }
 </script>
   </body>
 </html>
